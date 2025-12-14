@@ -1,5 +1,6 @@
 package io.github.tomekgadek.kata.infrastructure.config;
 
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 
 import org.springframework.context.annotation.Bean;
@@ -23,7 +24,8 @@ public class SecurityConfig {
                 .headers(headers ->
                         headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable).disable()
                 )
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"));
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"))
+                .httpBasic(Customizer.withDefaults()); // Basic Auth;
 
         return http.build();
     }
