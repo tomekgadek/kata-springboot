@@ -1,7 +1,7 @@
 package io.github.tomekgadek.kata.movie.domain;
 
+import io.github.tomekgadek.kata.infrastructure.log.Log;
 import io.github.tomekgadek.kata.movie.dto.MovieDto;
-import lombok.extern.java.Log;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
