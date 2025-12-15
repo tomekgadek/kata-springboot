@@ -13,10 +13,10 @@ class InMemoryMovieRepository implements MovieRepository {
     private final ConcurrentHashMap<Integer, Movie> map = new ConcurrentHashMap<>();
 
     @Override
-    public Movie save(Movie Movie) {
-        requireNonNull(Movie);
-        map.put(Movie.dto().getMovieId(), Movie);
-        return Movie;
+    public Movie save(Movie movie) {
+        requireNonNull(movie);
+        map.put(movie.dto().getMovieId(), movie);
+        return movie;
     }
 
     @Override

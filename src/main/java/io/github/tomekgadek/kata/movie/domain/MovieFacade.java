@@ -23,15 +23,15 @@ public class MovieFacade {
 
     public MovieDto add(MovieDto movieDto) {
         requireNonNull(movieDto);
-        Movie Movie = movieCreator.from(movieDto);
-        Movie =  movieRepository.save(Movie);
-        return Movie.dto();
+        Movie movie = movieCreator.from(movieDto);
+        movie =  movieRepository.save(movie);
+        return movie.dto();
     }
 
     public MovieDto show(Integer movieId) {
         requireNonNull(movieId);
-        Movie Movie = movieRepository.findOneOrThrow(movieId);
-        return Movie.dto();
+        Movie movie = movieRepository.findOneOrThrow(movieId);
+        return movie.dto();
     }
 
     public void delete(Integer... ids) {
