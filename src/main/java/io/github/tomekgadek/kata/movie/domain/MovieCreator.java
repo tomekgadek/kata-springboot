@@ -6,14 +6,14 @@ import static java.util.Objects.requireNonNull;
 
 class MovieCreator {
 
-    Movie from(MovieDto filmDto) {
-        requireNonNull(filmDto);
+    Movie from(MovieDto movieDto) {
+        requireNonNull(movieDto);
         return Movie.builder()
-                .movieId(filmDto.getMovieId())
-                .title(filmDto.getTitle())
-                .image(filmDto.getImage())
-                .releaseYear(filmDto.getReleaseYear())
-                .videoId(filmDto.getVideoId())
+                .movieId(movieDto.getMovieId())
+                .title(movieDto.getTitle())
+                .image(movieDto.getImage())
+                .releaseYear(movieDto.getReleaseYear())
+                .videoId(movieDto.getVideoId())
                 .build();
     }
 }

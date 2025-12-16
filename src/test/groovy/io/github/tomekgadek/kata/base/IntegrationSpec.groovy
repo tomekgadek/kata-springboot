@@ -4,6 +4,7 @@ import io.github.tomekgadek.kata.KataApplication
 import io.github.tomekgadek.kata.infrastructure.config.Profile
 import org.aspectj.lang.annotation.Before
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.annotation.Rollback
 import org.springframework.test.context.ActiveProfiles
@@ -22,10 +23,12 @@ import static org.springframework.security.test.web.servlet.setup.SecurityMockMv
 @SpringBootTest(classes = [KataApplication], webEnvironment = WebEnvironment.MOCK)
 @Transactional
 @Rollback
+@AutoConfigureMockMvc
 abstract class IntegrationSpec extends Specification {
     @Autowired
     protected WebApplicationContext webApplicationContext
 
+    @Autowired
     MockMvc mockMvc
 
     @Before

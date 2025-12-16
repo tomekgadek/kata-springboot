@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 class MovieController {
     private final MovieFacade movieFacade;
 
-    public MovieController(MovieFacade filmFacade) {
-        this.movieFacade = filmFacade;
+    public MovieController(MovieFacade movieFacade) {
+        this.movieFacade = movieFacade;
     }
 
     @GetMapping("movies")
-    Page<MovieDto> getFilms(Pageable pageable) {
+    Page<MovieDto> getMovies(Pageable pageable) {
         return movieFacade.findAll(pageable);
     }
 
     @GetMapping("movies/{movieId}")
-    MovieDto getFilm(@PathVariable Integer movieId) {
+    MovieDto getMovie(@PathVariable Integer movieId) {
         return movieFacade.show(movieId);
     }
 }

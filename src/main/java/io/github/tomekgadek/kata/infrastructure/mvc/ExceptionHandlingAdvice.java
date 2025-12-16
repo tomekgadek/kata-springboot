@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 class ExceptionHandlingAdvice {
 
     @ExceptionHandler(MovieNotFoundException.class)
-    ResponseEntity<ErrorMessage> handleNotFoundFilms(MovieNotFoundException e) {
+    ResponseEntity<ErrorMessage> handleNotFoundMovies(MovieNotFoundException e) {
         ErrorMessage errorMessage = new ErrorMessage(e.getMessage());
         return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
     }

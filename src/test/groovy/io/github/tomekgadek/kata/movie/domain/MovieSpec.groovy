@@ -26,7 +26,7 @@ class MovieSpec extends Specification implements SampleMovies {
     def "should list movies"() {
         given: "we have two movies in system"
         facade.add(system)
-        facade.add(tron)
+        facade.add(pirates)
 
         when: "we ask for all movies"
         Page<MovieDto> foundMovies = facade.findAll(new PageRequest(0, 4, Sort.by("movieId")))
@@ -34,6 +34,6 @@ class MovieSpec extends Specification implements SampleMovies {
         then: "system returns the movies we have added"
         foundMovies.getTotalElements() == 2
         foundMovies.contains(system)
-        foundMovies.contains(tron)
+        foundMovies.contains(pirates)
     }
 }

@@ -6,8 +6,8 @@ import io.github.tomekgadek.kata.movie.dto.MovieDto
 @CompileStatic
 trait SampleMovies {
 
-    MovieDto system = this.createMovieDto(1, "System", 1995, "/static/movies/img/system.jpg", "46qKHq7REI4")
-    MovieDto tron = this.createMovieDto(2, "Piraci z Krzemowej Doliny", 1999, "./static/movies/img/pirates.jpg", "lEyrivrjAuU")
+    MovieDto system = this.createMovieDto(1, "System", 1995, "./static/movies/img/system.jpg", "46qKHq7REI4")
+    MovieDto pirates = this.createMovieDto(2, "Piraci z Krzemowej Doliny", 1999, "./static/movies/img/pirates.jpg", "lEyrivrjAuU")
 
     static private MovieDto createMovieDto(Integer movieId, String title, Integer releaseYear, String image, String videoId) {
         return MovieDto.builder()
