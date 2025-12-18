@@ -23,7 +23,7 @@ class MovieControllerAcceptanceSpec extends IntegrationSpec implements SampleMov
         movieFacade.add(pirates)
 
         when: 'I go to /movie'
-        ResultActions getMovies = mockMvc.perform(get("/movies?page=0&size=2"))
+        ResultActions getMovies = mockMvc.perform(get("/api/movies?page=0&size=2"))
 
         then: 'I see details'
         getMovies.andExpect(status().isOk())
@@ -48,7 +48,7 @@ class MovieControllerAcceptanceSpec extends IntegrationSpec implements SampleMov
                 }"""))
 
         when: 'I go to /movie'
-        ResultActions getMovie = mockMvc.perform(get("/movies/$system.movieId"))
+        ResultActions getMovie = mockMvc.perform(get("/api/movies/$system.movieId"))
 
         then: 'I see movie'
         getMovie.andExpect(status().isOk())

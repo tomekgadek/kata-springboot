@@ -16,12 +16,12 @@ class MovieController {
         this.movieFacade = movieFacade;
     }
 
-    @GetMapping("movies")
+    @GetMapping("api/movies")
     Page<MovieDto> getMovies(Pageable pageable) {
         return movieFacade.findAll(pageable);
     }
 
-    @GetMapping("movies/{movieId}")
+    @GetMapping("api/movies/{movieId}")
     MovieDto getMovie(@PathVariable Integer movieId) {
         return movieFacade.show(movieId);
     }

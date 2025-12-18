@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kata SpringBoot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <script defer src="js/movies-list-component.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body class="has-background-light">
+
+<!-- header -->
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            Kata SpringBoot
+        </a>
+    </div>
+</nav>
+
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <!-- left sidebar -->
+            <aside class="column is-3">
+                <nav class="menu">
+                    <p class="menu-label">
+                        Nawigacja
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a class="is-active" href="movies-list.html">Lista filmów</a></li>
+                        <li><a href="#">Menu 1</a></li>
+                        <li><a href="#">Menu 2</a></li>
+                    </ul>
+
+                    <p class="menu-label">
+                        Kata Spring Boot
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="#">Zadanie 1</a></li>
+                        <li><a href="#">Zadanie 2</a></li>
+                        <li><a href="#">Zadanie 3</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- right column -->
+            <div class="column is-9" x-data="moviesListComponent()" x-init="init()">
+
+                <!-- section header -->
+                <section class="section pt-0 pb-4">
+                    <h1 class="title is-3">Lista filmów</h1>
+                </section>
+
+                <!-- Lista filmów -->
+                <section class="section pt-0">
+
+                    <!-- Loading -->
+                    <div class="has-text-centered" x-show="isLoading">
+                        <button class="button is-loading is-white is-large">
+                            Ładowanie filmów...
+                        </button>
+                    </div>
+
+                    <!-- Brak filmów -->
+                    <p class="has-text-grey has-text-centered" x-show="!isLoading && movies.length === 0 && !errorMessage">
+                        Brak filmów do wyświetlenia.
+                    </p>
+
+                    <!-- Błąd -->
+                    <article class="message is-danger"  x-show="errorMessage && !isLoading">
+                        <div class="message-body" x-text="errorMessage"></div>
+                    </article>
+
+                    <!-- Grid filmów: 2 wiersze x 3 kolumny -->
+                    <div class="columns is-multiline" x-show="!isLoading && movies.length > 0">
+                        <template x-for="movie in movies" :key="movie.movieId">
+                            <div class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <!-- 16:9 zamiast mocnego rozciągania -->
+                                        <figure class="image is-16by9">
+                                            <img :src="imageUrl(movie)" :alt="movie.title" style="object-fit: cover;"
+                                                 onerror="this.src='http://localhost:8080/movies/img/placeholder.png'">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="title is-5 mb-1" x-text="movie.title"></p>
+                                        <p class="subtitle is-7" x-text="`Rok premiery: ${movie.releaseYear}`"></p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#" class="card-footer-item" @click.prevent="playMovie(movie.videoId)">
+                                            YouTube
+                                        </a>
+                                    </footer>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </section>
+
+                <!-- Paginacja -->
+                <nav class="level mt-4"
+                     x-show="totalPages > 1 && !isLoading">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <button class="button"
+                                    :disabled="page === 0"
+                                    @click="previousPage()">
+                                Poprzednia
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="level-item has-text-centered">
+                        <p class="is-size-6"
+                           x-text="`Strona ${page + 1} z ${totalPages}`"></p>
+                    </div>
+
+                    <div class="level-right">
+                        <div class="level-item">
+                            <button class="button is-link"
+                                    :disabled="page >= totalPages - 1"
+                                    @click="nextPage()">
+                                Następna
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stopka -->
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Kata Spring Boot</strong> - Tomasz Gądek
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
