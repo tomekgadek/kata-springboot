@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Kata SpringBoot</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kata SpringBoot">
+    <meta name="author" content="TG">
+
+    <link rel="icon" type="image/png" href="http://localhost:8080/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <script defer src="js/movies-list-component.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -61,25 +65,25 @@
                     <h1 class="title is-3">Lista filmów</h1>
                 </section>
 
-                <!-- Lista filmów -->
+                <!-- list of movies -->
                 <section class="section pt-0">
 
-                    <!-- Loading -->
-                    <div class="has-text-centered" x-show="isLoading">
-                        <button class="button is-loading is-white is-large">
+                    <div class="has-text-centered" x-show="isLoading || errorMessage || movies.length === 0">
+                        <!-- spinner -->
+                        <div x-show="isLoading && !errorMessage" class="loader is-loading is-size-3 mx-auto"></div>
+
+                        <!-- load message -->
+                        <p x-show="isLoading && !errorMessage" class="has-text-grey mt-3">
                             Ładowanie filmów...
-                        </button>
+                        </p>
+
+                        <p x-show="!isLoading && movies.length === 0 && !errorMessage" class="has-text-grey mt-3">
+                            Brak filmów do wyświetlenia...
+                        </p>
+
+                        <p x-show="errorMessage && !isLoading" class="has-text-danger mt-3" x-text="errorMessage"></p>
                     </div>
 
-                    <!-- Brak filmów -->
-                    <p class="has-text-grey has-text-centered" x-show="!isLoading && movies.length === 0 && !errorMessage">
-                        Brak filmów do wyświetlenia.
-                    </p>
-
-                    <!-- Błąd -->
-                    <article class="message is-danger"  x-show="errorMessage && !isLoading">
-                        <div class="message-body" x-text="errorMessage"></div>
-                    </article>
 
                     <!-- Grid filmów: 2 wiersze x 3 kolumny -->
                     <div class="columns is-multiline" x-show="!isLoading && movies.length > 0">
@@ -87,7 +91,7 @@
                             <div class="column is-one-third">
                                 <div class="card">
                                     <div class="card-image">
-                                        <!-- 16:9 zamiast mocnego rozciągania -->
+                                        <!-- 16:9 image -->
                                         <figure class="image is-16by9">
                                             <img :src="imageUrl(movie)" :alt="movie.title" style="object-fit: cover;"
                                                  onerror="this.src='http://localhost:8080/movies/img/placeholder.png'">
@@ -108,14 +112,11 @@
                     </div>
                 </section>
 
-                <!-- Paginacja -->
-                <nav class="level mt-4"
-                     x-show="totalPages > 1 && !isLoading">
+                <!-- pagination -->
+                <nav class="level mt-4" x-show="totalPages > 0 && !isLoading">
                     <div class="level-left">
                         <div class="level-item">
-                            <button class="button"
-                                    :disabled="page === 0"
-                                    @click="previousPage()">
+                            <button class="button" :disabled="page === 0" @click="previousPage()">
                                 Poprzednia
                             </button>
                         </div>
@@ -128,9 +129,7 @@
 
                     <div class="level-right">
                         <div class="level-item">
-                            <button class="button is-link"
-                                    :disabled="page >= totalPages - 1"
-                                    @click="nextPage()">
+                            <button class="button is-link" :disabled="page >= totalPages - 1" @click="nextPage()">
                                 Następna
                             </button>
                         </div>

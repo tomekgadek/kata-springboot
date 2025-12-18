@@ -1,14 +1,14 @@
 function moviesListComponent() {
     return {
-        apiUrl: '/api/movies',   // dopasuj do backendu
+        apiUrl: '/api/movies',
         page: 0,
-        size: 6,                 // 6 filmów: 2 wiersze x 3 kolumny
+        size: 6,
         totalPages: 0,
         movies: [],
         isLoading: false,
         errorMessage: '',
 
-        // dane logowania na sztywno (Basic Auth: user/user)
+        // login data
         username: 'user',
         password: 'user',
         authHeader: '',
@@ -49,7 +49,7 @@ function moviesListComponent() {
                 this.page = data.number || 0;
             } catch (e) {
                 console.error(e);
-                this.errorMessage = `Error load movies: ${e.message}`;
+                this.errorMessage = `Problem z odczytem filmów: ${e.message}`;
                 this.movies = [];
             } finally {
                 this.isLoading = false;
