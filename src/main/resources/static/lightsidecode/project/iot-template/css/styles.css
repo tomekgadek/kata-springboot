@@ -1,0 +1,133 @@
+.header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style dla daty */
+.last-updated {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+/* Style dla przycisku wylogowania */
+.logout-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.timestamp {
+    font-weight: 700;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container button:hover {
+    opacity: 0.8;
+}
+
+/* Kontener dla podstrony details */
+.details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Kolumna */
+.column {
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    /*background-color: #f2f2f2;*/
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Styl dla nagłówka kolumny */
+.column h2 {
+    margin-top: 0;
+}
+
+/* Styl dla statusu żarówki */
+.light-status {
+    font-weight: bold;
+    color: #000;
+}
+
+.on {
+    box-shadow: 0px 2px 5px 0px rgb(255, 0, 0);
+    background-color: #da6f6f4e;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.bulb {
+	width: 150px;
+	height: 150px;
+	margin: 10px auto;
+}
+
+.bulb-off {
+	background-image: url('../img/bulb_off.png');
+  background-size: cover;
+}
+
+.bulb-on {
+	background-image: url('../img/bulb_on.png');
+  background-size: cover;
+}

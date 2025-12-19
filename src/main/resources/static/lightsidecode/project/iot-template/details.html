@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>IoT</title>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <div class="header" id="header">
+    <div class="last-updated">Data synchronizacji<br><span class="timestamp" id="timestamp">?</span></div>
+    <button class="logout-button" id="logout">Wyloguj</button>
+  </div>
+  
+  <div class="details-container" id="details-container">
+    <div class="column">
+      <h2>Temperatura</h2>
+      <p>Aktualna temperatura: <strong><span id="temperature">0</span> °C</strong></p>
+      <div>
+        <canvas id="temperatureChart"></canvas>
+      </div>
+    </div>
+
+    <div class="column">
+      <h2>Wilgotność powietrza</h2>
+      <p>Aktualna wilgotność: <strong><span id="humidity">0</span> %</strong></p>
+      <div>
+        <canvas id="humidityChart"></canvas>
+      </div>
+    </div>
+
+    <div class="column" id="light-status">
+      <h2>Oświetlenie w salonie</h2>
+      <p>Oświetlenie jest <span class="light-status" id="light">wyłączone</span>.</p>
+      <div id="bulb" class="bulb bulb-off">&nbsp;</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
