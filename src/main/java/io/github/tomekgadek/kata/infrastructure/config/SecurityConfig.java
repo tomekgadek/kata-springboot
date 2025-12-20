@@ -20,6 +20,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers("/static/**").permitAll()
+                        .requestMatchers("/index.html").permitAll()
+                        .requestMatchers("/").permitAll()
+                        .requestMatchers("/img/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .headers(headers ->

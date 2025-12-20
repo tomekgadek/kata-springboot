@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Super Kursy Online</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #F5F1E9;
+            color: #333;
+            font-family: 'Roboto', Arial, sans-serif;
+            text-align: center;
+        }
+
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .course {
+            width: 300px;
+            margin: 20px;
+            padding: 0px 0px 20px;
+            /*border: 1px solid #1f2937;*/
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #FF6F00;
+        }
+
+        .course h2 {
+            color: #FF6F00;
+            font-size: 1.5rem;
+            margin: 12px 0;
+        }
+
+        .course:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+            /*border-color: #f97316;*/
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .course:hover img {
+            transform: scale(1.05);
+        }
+
+        .course a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF6F00;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .course a:hover {
+            background-color: #D65A00;
+            cursor: pointer;
+        }
+
+        .course .course-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kursy Online</h1>
+    <div class="courses">
+        <div class="course">
+            <img src="./img/kurs1.jpeg" alt="Ilustracja kursu programowania">
+            <div class="course-content">
+                <h2>Kurs Programowania</h2>
+                <p>Naucz się programować w 3 dni!</p>
+                <a href="#" aria-label="Zapisz się na Kurs Programowania">Zapisz się!</a>
+            </div>
+        </div>
+
+        <div class="course">
+            <img src="./img/kurs2.jpeg" alt="Ilustracja kursu grafiki">
+            <div class="course-content">
+                <h2>Kurs Grafiki</h2>
+                <p>Zostań mistrzem Photoshopa w tydzień!</p>
+                <a href="#" aria-label="Zapisz się na Kurs Grafiki">Zapisz się!</a>
+            </div>
+        </div>
+
+        <div class="course">
+            <img src="./img/kurs3.jpeg" alt="Ilustracja kursu marketingu">
+            <div class="course-content">
+                <h2>Kurs Marketingu</h2>
+                <p>Zarabiaj miliony na reklamach!</p>
+                <a href="#" aria-label="Zapisz się na Kurs Marketingu">Zapisz się!</a>
+            </div>
+        </div>
+        <div class="course">
+            <img src="./img/projekt-1.jpeg" alt="Aplikacja internetowa do nauki programowania od podstaw">
+            <div class="course-content">
+                <h2>Projekt 1</h2>
+                <p>Aplikacja internetowa umożliwiająca naukę programowania od podstaw.</p>
+                <a href="#" aria-label="Zobacz szczegóły Projekt 1">Zobacz więcej</a>
+            </div>
+        </div>
+
+        <div class="course">
+            <img src="./img/projekt-2.jpeg" alt="Platforma e-learningowa z interaktywnymi kursami">
+            <div class="course-content">
+                <h2>Projekt 2</h2>
+                <p>Platforma e-learningowa z interaktywnymi kursami.</p>
+                <a href="#" aria-label="Zobacz szczegóły Projekt 2">Zobacz więcej</a>
+            </div>
+        </div>
+
+        <div class="course">
+            <img src="./img/projekt-3.jpeg" alt="System zarządzania treścią dla kursów online">
+            <div class="course-content">
+                <h2>Projekt 3</h2>
+                <p>System zarządzania treścią dla kursów online.</p>
+                <a href="#" aria-label="Zobacz szczegóły Projekt 3">Zobacz więcej</a>
+            </div>
+        </div>
+
+        <div class="course">
+            <img src="./img/projekt-4.jpeg" alt="Aplikacja mobilna wspierająca naukę programowania">
+            <div class="course-content">
+                <h2>Projekt 4</h2>
+                <p>Aplikacja mobilna wspierająca naukę programowania.</p>
+                <a href="#" aria-label="Zobacz szczegóły Projekt 4">Zobacz więcej</a>
+            </div>
+        </div>
+
+        <div class="course">
+            <img src="./img/projekt-5.jpeg" alt="Wizualny edytor kursów z możliwością integracji API">
+            <div class="course-content">
+                <h2>Projekt 5</h2>
+                <p>Wizualny edytor kursów z możliwością integracji API.</p>
+                <a href="#" aria-label="Zobacz szczegóły Projekt 5">Zobacz więcej</a>
+            </div>
+        </div>
+
+        <div class="course">
+            <img src="./img/projekt-6.jpeg" alt="Interaktywna platforma do tworzenia quizów i testów">
+            <div class="course-content">
+                <h2>Projekt 6</h2>
+                <p>Interaktywna platforma do tworzenia quizów i testów.</p>
+                <a href="#" aria-label="Zobacz szczegóły Projekt 6">Zobacz więcej</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

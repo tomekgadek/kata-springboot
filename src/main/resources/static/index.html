@@ -2,10 +2,157 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Kata SpringBoot</title>
+    <title>Proste logowanie - Basic Auth</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Przykład logowania Basic Auth z Alpine.js">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        body { background-color: #f5f5f5; }
+    </style>
 </head>
-<body>
-    Kata SpringBoot
+<body class="has-background-light">
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-5-desktop is-7-tablet is-11-mobile">
+                <div class="box" x-data="loginComponent()">
+                    <h1 class="title is-4 has-text-centered mb-4">Logowanie do usługi</h1>
+
+                    <!-- wynik -->
+                    <div class="mt-4">
+                        <p class="has-text-grey" x-show="statusCode !== null">
+                            Kod odpowiedzi HTTP:
+                            <strong x-text="statusCode"></strong>
+                        </p>
+
+                        <p class="has-text-success" x-show="statusCode === 200">
+                            Logowanie się powiodło (200 OK).
+                        </p>
+
+                        <p class="has-text-danger" x-show="statusCode === 401">
+                            Logowanie nieudane (401 Unauthorized).
+                        </p>
+
+                        <p class="has-text-warning"
+                           x-show="statusCode !== null && statusCode !== 200 && statusCode !== 401">
+                            Logowanie nieudane
+                        </p>
+
+                        <p class="has-text-danger" x-show="errorMessage" x-text="errorMessage"></p>
+                    </div>
+
+                    <!-- formularz -->
+                    <form @submit.prevent="login">
+                        <div class="field">
+                            <label class="label">Login</label>
+                            <div class="control">
+                                <input class="input"
+                                       type="text"
+                                       placeholder="np. user"
+                                       x-model="username">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Hasło</label>
+                            <div class="control">
+                                <input class="input"
+                                       type="password"
+                                       placeholder="np. user"
+                                       x-model="password">
+                            </div>
+                        </div>
+
+                        <div class="field mt-4">
+                            <div class="control">
+                                <button class="button is-primary is-fullwidth"
+                                        type="submit"
+                                        :class="{ 'is-loading': loading }">
+                                    Zaloguj
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <hr class="my-4">
+
+                    <!-- opis Basic Auth -->
+                    <h2 class="title is-5">Jak działa Basic Auth?</h2>
+                    <div class="content is-size-7">
+                        <p>
+                            Basic Auth to prosty mechanizm uwierzytelniania HTTP, w którym login i hasło
+                            są wysyłane w nagłówku <code>Authorization</code> zakodowane w Base64
+                            w postaci <code>login:hasło</code>.
+                        </p>
+                        <p>Przykładowy nagłówek:</p>
+                        <pre><code>Authorization: Basic &lt;base64(login:hasło)&gt;</code></pre>
+                        <p>
+                            Serwer sprawdza te dane i zwraca kod HTTP, np. <code>200</code> przy sukcesie
+                            lub <code>401</code> przy błędnych danych. W tym przykładzie komponent Alpine
+                            wysyła żądanie <code>GET</code> z Basic Auth i wyświetla tylko kod odpowiedzi
+                            oraz prosty komunikat o wyniku logowania.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function loginComponent() {
+        return {
+            apiUrl: 'http://localhost:8080/api/movies', // example API endpoint
+            username: 'user',
+            password: 'user',
+            authHeader: '',
+            loading: false,
+            statusCode: null,
+            errorMessage: '',
+
+            buildAuthHeader() {
+                const token = btoa(this.username + ':' + this.password);
+                this.authHeader = 'Basic ' + token;
+            },
+
+            async login() {
+                this.errorMessage = '';
+                this.statusCode = null;
+                this.loading = true;
+
+                this.buildAuthHeader();
+
+                try {
+                    const response = await fetch(this.apiUrl, {
+                        method: 'GET',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Authorization': this.authHeader
+                        }
+                    });
+
+                    this.statusCode = response.status;
+
+                    if (!response.ok && response.status !== 401) {
+                        this.errorMessage = 'Błąd HTTP: ' + response.status;
+                    }
+                } catch (e) {
+                    console.error(e);
+                    this.errorMessage = e.message || 'Błąd połączenia z usługą.';
+                } finally {
+                    this.loading = false;
+                }
+            }
+        };
+    }
+</script>
+
 </body>
 </html>

@@ -8,18 +8,8 @@ function moviesListComponent() {
         isLoading: false,
         errorMessage: '',
 
-        // login data
-        username: 'user',
-        password: 'user',
-        authHeader: '',
-
         init() {
             this.loadMovies();
-        },
-
-        buildAuthHeader() {
-            const token = btoa(`${this.username}:${this.password}`);
-            this.authHeader = `Basic ${token}`;
         },
 
         async loadMovies() {
@@ -30,9 +20,6 @@ function moviesListComponent() {
                 const url = `${this.apiUrl}?page=${this.page}&size=${this.size}`;
 
                 const headers = { 'Accept': 'application/json' };
-                if (this.authHeader) {
-                    headers['Authorization'] = this.authHeader;
-                }
 
                 const response = await fetch(url, { method: 'GET', headers });
 
