@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Design – Twoja wizja, nasza precyzja</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        header, .realizacje, .opinie, .banner, footer {
+            background-color: #F2E7DB;
+            color: #4F351E;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .o-nas {
+            background-color: #E5D5C3;
+            color: #4F351E;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .o-nas .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .realizacje h2, .opinie h2, .o-nas h2 {
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .banner {
+            position: relative;
+            background: url('./img/biurko.webp') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .banner h2, .banner p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .kolumny {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .kolumna {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .kolumna img {
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+
+        .opinia {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #4F351E;
+            color: #F2E7DB;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #F2E7DB;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>X Design – Twoja wizja, nasza precyzja</h1>
+    </header>
+    
+    <section class="banner">
+        <h2>Meble na wymiar – stworzone dla Ciebie</h2>
+        <p>Tworzymy unikalne meble, które idealnie wpisują się w Twoją przestrzeń...</p>
+    </section>
+    
+    <section class="realizacje">
+        <h2>Nasze realizacje – funkcjonalność i estetyka w idealnej harmonii</h2>
+        <div class="kolumny">
+            <div class="kolumna">
+                <img src="./img/kuchnia.webp" alt="Kuchnie na wymiar">
+                <h3>Kuchnie na wymiar – serce Twojego domu</h3>
+                <p>Projektujemy kuchnie, które łączą wygodę, trwałość i ponadczasowy design.</p>
+            </div>
+            <div class="kolumna">
+                <img src="./img/szafa.webp" alt="Szafy i zabudowy">
+                <h3>Szafy i zabudowy – harmonia i porządek w Twoim wnętrzu</h3>
+                <p>Zaprojektujemy dla Ciebie szafy wnękowe, garderoby i zabudowy.</p>
+            </div>
+            <div class="kolumna">
+                <img src="./img/biurko.webp" alt="Meble biurowe">
+                <h3>Meble biurowe – komfort i ergonomia w miejscu pracy</h3>
+                <p>Tworzymy biurka, regały i szafy, które sprzyjają efektywnej pracy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="o-nas">
+		<div class="container">
+        <h2>O nas</h2>
+        <p>
+			X Design to firma stolarska z wieloletnim doświadczeniem w projektowaniu i produkcji mebli na wymiar. 
+			Od samego początku naszym celem jest tworzenie unikalnych rozwiązań, które idealnie wpisują się w 
+			potrzeby naszych klientów. Każdy projekt realizujemy z dbałością o detale, wykorzystując 
+			sprawdzone technologie i najwyższej klasy materiały.
+		</p>
+		<p>
+			Nasza misja? Dostarczać meble, które łączą funkcjonalność, estetykę i trwałość. Tworzymy z 
+			pasją, inspirując się nowoczesnym designem i klasycznym rzemiosłem.
+		</p>
+	</div>
+    </section>
+
+    <section class="opinie">
+        <h2>Co mówią nasi klienci?</h2>
+        <div class="kolumny">
+            <div class="opinia">
+                <img class="avatar" src="./img/adam.jpg" alt="Adam Nowak">
+                <h3>Adam Nowak</h3>
+                <p>Jestem zachwycony jakością wykonania i dbałością o detale...</p>
+            </div>
+            <div class="opinia">
+                <img class="avatar" src="./img/ewa.jpg" alt="Ewa Kowalska">
+                <h3>Ewa Kowalska</h3>
+                <p>Szafa na wymiar idealnie pasuje do mojego wnętrza...</p>
+            </div>
+            <div class="opinia">
+                <img class="avatar" src="./img/marek.jpg" alt="Marek Wiśniewski">
+                <h3>Marek Wiśniewski</h3>
+                <p>Biurko, które zamówiłem, jest solidne i estetyczne...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Email: kontakt@xdesign.pl</p>
+                <p>Telefon: +48 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h4>Znajdź nas</h4>
+                <p>ul. Przykładowa 10, 00-000 Warszawa</p>
+            </div>
+            <div class="footer-section">
+                <h4>Social Media</h4>
+                <p><a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 X Design – Twoja wizja, nasza precyzja. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+</body>
+</html>
