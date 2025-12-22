@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Akademia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e7e7e7;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #34495e;
+            margin: 0;
+        }
+
+        .site-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .main-navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-navigation li {
+            margin-left: 20px;
+        }
+
+        .main-navigation a {
+            display: block;
+            padding: 10px 5px;
+            color: #34495e;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .main-navigation a:hover,
+        .main-navigation .current-menu-item a {
+            color: #007bff;
+        }
+
+        .banner {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            background-image: url('https://via.placeholder.com/1200x300/3498db/ffffff?text=Witaj+w+Mojej+Akademii');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner h2 {
+            color: #ffffff;
+            font-size: 2.8em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        main {
+            flex: 1;
+            min-width: 65%;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        aside {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .widget {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .widget h3 {
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+
+        .widget ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .widget li {
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 8px;
+        }
+
+        .widget li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .site-footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+
+        .newsletter-container {
+            background-color: transparent;
+            padding: 0;
+            box-shadow: none;
+            text-align: left;
+        }
+
+        .newsletter-container h2 {
+            font-size: 1.5em;
+            color: #3498db;
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .newsletter-container p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #555;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 0.95em;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.8em;
+            margin-top: 5px;
+            display: block;
+            min-height: 1.2em;
+        }
+
+        .form-control.invalid {
+            border-color: #dc3545;
+        }
+
+        .submit-btn {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+            box-shadow: 0 3px 8px rgba(0, 123, 255, 0.25);
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(to right, #0056b3, #004085);
+            box-shadow: 0 5px 12px rgba(0, 123, 255, 0.35);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+        }
+
+        .thank-you-popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background-color: #fff;
+            color: #333;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1001;
+            max-width: 450px;
+            width: 90%;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .thank-you-popup.show {
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .thank-you-popup h2 {
+            color: #28a745;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: none;
+        }
+
+        .thank-you-popup p {
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .overlay.show {
+            display: block;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .site-header .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-navigation ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .main-navigation li {
+                margin: 5px 10px;
+            }
+
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            aside {
+                flex-direction: column;
+            }
+
+            .widget {
+                flex: auto;
+                width: 100%;
+            }
+
+            .banner h2 {
+                font-size: 2em;
+            }
+
+            .banner p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <h1 class="site-title"><a href="#">Moja Akademia</a></h1>
+        <nav class="main-navigation">
+            <ul>
+                <li class="current-menu-item"><a href="#">Start</a></li>
+                <li><a href="#">Kursy</a></li>
+                <li><a href="#">Wykładowcy</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="banner">
+    <div class="container">
+        <h2>Rozwiń swój potencjał z nami!</h2>
+        <p>Nowoczesne kursy i szkolenia online dopasowane do twoich potrzeb. Ucz się we własnym tempie, gdziekolwiek
+            jesteś.</p>
+    </div>
+</div>
+
+<div class="container content-wrapper">
+    <main>
+        <h2>Witaj w mojej akademii!</h2>
+        <p>Jesteśmy wiodącą platformą edukacyjną oferującą szeroki wachlarz kursów online, które pomogą ci zdobyć
+            nowe umiejętności, rozwinąć karierę lub po prostu poszerzyć horyzonty. Nasza misja to dostarczanie
+            wysokiej jakości wiedzy w przystępny i angażujący sposób.</p>
+
+        <img src="./img/main-image.png" alt="Nauka online" style="margin-bottom: 20px; border-radius: 5px;">
+
+        <h3>Nasze najpopularniejsze kursy</h3>
+        <p>Wybieraj spośród kursów z różnych dziedzin:</p>
+        <ul>
+            <li><strong>Programowanie:</strong> od podstaw Pythona po zaawansowany JavaScript i tworzenie aplikacji
+                webowych.
+            </li>
+            <li><strong>Marketing cyfrowy:</strong> SEO, SEM, media społecznościowe, content marketing - zostań
+                ekspertem w promocji online.
+            </li>
+            <li><strong>Grafika komputerowa:</strong> projektowanie graficzne, UI/UX, obróbka zdjęć w popularnych
+                programach.
+            </li>
+            <li><strong>Rozwój osobisty:</strong> zarządzanie czasem, efektywna komunikacja, budowanie pewności
+                siebie.
+            </li>
+            <li><strong>Języki obce:</strong> angielski biznesowy, hiszpański dla początkujących i wiele innych.
+            </li>
+        </ul>
+
+        <h3>Dlaczego warto wybrać naszą akademię?</h3>
+        <p>Nasze kursy są tworzone przez doświadczonych ekspertów i praktyków w swoich dziedzinach. Stawiamy na
+            interaktywność, praktyczne zadania i wsparcie społeczności uczących się. Zapewniamy:</p>
+        <ul>
+            <li>dostęp do materiałów 24/7</li>
+            <li>certyfikaty ukończenia kursów</li>
+            <li>forum dyskusyjne i wsparcie mentora</li>
+            <li>regularne aktualizacje treści</li>
+            <li>atrakcyjne ceny i pakiety</li>
+        </ul>
+        <p>Dołącz do tysięcy zadowolonych studentów i rozpocznij swoją edukacyjną przygodę już dziś!</p>
+
+    </main>
+
+    <aside>
+        <div class="widget">
+            <h3>Kategorie kursów</h3>
+            <ul>
+                <li><a href="#">Technologie IT</a></li>
+                <li><a href="#">Biznes i marketing</a></li>
+                <li><a href="#">Projektowanie i grafika</a></li>
+                <li><a href="#">Rozwój osobisty</a></li>
+                <li><a href="#">Języki obce</a></li>
+                <li><a href="#">Hobby i zainteresowania</a></li>
+            </ul>
+        </div>
+
+        <div class="widget">
+            <div class="newsletter-container">
+                <h3>Zapisz się na newsletter!</h3>
+                <p>Otrzymuj informacje o nowościach, promocjach i darmowych materiałach.</p>
+
+                <form id="newsletter-form">
+                    <div class="form-group">
+                        <label for="name">Imię (opcjonalnie):</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="np. Jan">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adres e-mail:</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                               placeholder="np. jan@example.com" required>
+                        <small class="error-message" id="email-error"></small>
+                    </div>
+                    <button type="submit" class="submit-btn">Zapisz się!</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="widget">
+            <h3>Nadchodzące wydarzenia</h3>
+            <ul>
+                <li>Webinar: wprowadzenie do AI - 15.08</li>
+                <li>Warsztat: skuteczne SEO - 22.08</li>
+                <li>Spotkanie Q&A z ekspertem - 30.08</li>
+                <li>Kurs: programowanie w Pythonie - 05.09</li>
+
+            </ul>
+        </div>
+    </aside>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="quote-container"
+             style="margin-bottom: 20px; font-style: italic; border-left: 4px solid #ecf0f1; padding-left: 20px;">
+            <p>"Edukacja to najpotężniejsza broń, której możesz użyć, aby zmienić świat."</p>
+            <p style="text-align: right; font-size: 0.9em; margin-top: 5px;">- Nelson Mandela</p>
+        </div>
+        <p>© 2024 Moja Akademia. Wszelkie prawa zastrzeżone. | <a href="#" style="color: #ecf0f1;">Polityka
+            prywatności</a></p>
+    </div>
+</footer>
+
+<div id="thank-you-popup" class="thank-you-popup">
+    <span class="close-btn" id="close-popup-btn">×</span>
+    <h2>🎉 Dziękujemy za zapis! 🎉</h2>
+    <p>Cieszymy się, że do nas dołączyłeś/dołączyłaś. Wkrótce otrzymasz od nas wartościowe informacje o kursach
+        online.</p>
+    <p>Sprawdź swoją skrzynkę odbiorczą (oraz folder spam/oferty).</p>
+</div>
+<div id="overlay" class="overlay"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('newsletter-form');
+
+        if (form) {
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            const thankYouPopup = document.getElementById('thank-you-popup');
+            const closePopupButton = document.getElementById('close-popup-btn');
+            const overlay = document.getElementById('overlay');
+            const nameInput = document.getElementById('name');
+
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+            function showPopup() {
+                if (overlay && thankYouPopup) {
+                    overlay.classList.add('show');
+                    thankYouPopup.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function hidePopup() {
+                if (overlay && thankYouPopup) {
+                    overlay.classList.remove('show');
+                    thankYouPopup.classList.remove('show');
+                    document.body.style.overflow = '';
+                    if (form) form.reset();
+
+                    if (emailError) emailError.textContent = '';
+                    if (emailInput) emailInput.classList.remove('invalid');
+                }
+            }
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                if (!emailInput || !emailError) {
+                    console.error("Nie znaleziono elementów formularza email lub błędu.");
+                    return;
+                }
+
+                const email = emailInput.value.trim();
+                let isValid = true;
+
+                if (email === '') {
+                    emailError.textContent = 'Pole e-mail jest wymagane.';
+                    emailInput.classList.add('invalid');
+                    isValid = false;
+                } else if (!validateEmail(email)) {
+                    emailError.textContent = 'Proszę podać poprawny adres e-mail.';
+                    emailInput.classList.add('invalid');
+                    isValid = false;
+                } else {
+                    emailError.textContent = '';
+                    emailInput.classList.remove('invalid');
+                }
+
+                if (isValid) {
+                    console.log('Formularz poprawny. Dane do wysłania:');
+
+                    console.log('Imię:', nameInput ? nameInput.value : 'Nie podano');
+                    console.log('Email:', email);
+
+                    showPopup();
+
+                } else {
+                    console.log('Formularz zawiera błędy.');
+                }
+            });
+
+            if (closePopupButton) {
+                closePopupButton.addEventListener('click', hidePopup);
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', hidePopup);
+            }
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && thankYouPopup && thankYouPopup.classList.contains('show')) {
+                    hidePopup();
+                }
+            });
+        } else {
+            console.warn("Element formularza o ID 'newsletter-form' nie został znaleziony.");
+        }
+
+    });
+</script>
+
+</body>
+
+</html>
