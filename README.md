@@ -7,3 +7,4 @@
 + [Jak zdefiniować beana w kodzie?](blog/tg-blog-sb-jak-zdefiniowac-beana-w-kodzie.md)
 + [Co to są stereotypy w Spring?](blog/tg-blog-sb-co-to-sa-stereotypy-w-spring.md)
 + [Jaka jest różnica między beanem a POJO?](blog/tg-blog-sb-jaka-jest-roznica-miedzy-beanem-a-pojo.md)
++ [Co to jest mechanizm wstrzykiwania zależności w Spring?](blog/tg-blog-sb-co-to-jest-mechanizm-wstrzykiwania-zaleznosci.md)
