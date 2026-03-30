@@ -11,3 +11,4 @@
 + [Jakie mamy sposoby wstrzykiwania zależności w Spring?](blog/tg-blog-sb-jakie-mamy-sposoby-wstrzykiwania-zaleznosci-w-spring.md)
 + [Jak wstrzykiwać zależności przez konstruktor w Spring?](blog/tg-blog-sb-jak-wstrzykiwac-zaleznosci-przez-konstruktor-w-spring.md)
 + [Jak wstrzykiwać zależności przez pole w Spring?](blog/tg-blog-sb-jak-wstrzykiwac-zaleznosci-przez-pole-w-spring.md)
++ [Jak wstrzykiwać zależności przez właściwość w Spring?](blog/tg-blog-sb-jak-wstrzykiwac-zaleznosci-przez-wlasciwosc-w-spring.md)
