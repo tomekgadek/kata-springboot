@@ -14,3 +14,4 @@
 + [Jak wstrzykiwać zależności przez właściwość w Spring?](blog/tg-blog-sb-jak-wstrzykiwac-zaleznosci-przez-wlasciwosc-w-spring.md)
 + [Jak zarządzać konfiguracją w Spring Boot?](blog/tg-blog-sb-jak-zarzadzac-konfiguracja-w-spring-boot.md)
 + [Jak wczytywać konfigurację w Spring Boot?](blog/tg-blog-sb-jak-wczytywac-konfiguracje-w-spring-boot.md)
++ [Co to jest REST?](blog/tg-blog-sb-co-to-jest-rest.md)
