@@ -16,3 +16,4 @@
 + [Jak wczytywać konfigurację w Spring Boot?](blog/tg-blog-sb-jak-wczytywac-konfiguracje-w-spring-boot.md)
 + [Co to jest REST?](blog/tg-blog-sb-co-to-jest-rest.md)
 + [Jak zaimplementować REST w Spring Boot?](blog/tg-blog-sb-jak-zaimplementowac-rest-w-spring-boot.md)
++ [Jak działa @RequestMapping na poziomie klasy?](blog/tg-blog-sb-jak-dziala-request-mapping-na-poziomie-klasy.md)
