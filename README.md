@@ -17,3 +17,4 @@
 + [Co to jest REST?](blog/tg-blog-sb-co-to-jest-rest.md)
 + [Jak zaimplementować REST w Spring Boot?](blog/tg-blog-sb-jak-zaimplementowac-rest-w-spring-boot.md)
 + [Jak działa @RequestMapping na poziomie klasy?](blog/tg-blog-sb-jak-dziala-request-mapping-na-poziomie-klasy.md)
++ [Jakie mamy metody HTTP w Spring Boot?](blog/tg-blog-sb-jakie-mamy-metody-http-w-spring-boot.md)
