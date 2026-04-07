@@ -19,3 +19,4 @@
 + [Jak działa @RequestMapping na poziomie klasy?](blog/tg-blog-sb-jak-dziala-request-mapping-na-poziomie-klasy.md)
 + [Jakie mamy metody HTTP w Spring Boot?](blog/tg-blog-sb-jakie-mamy-metody-http-w-spring-boot.md)
 + [Jak dostarczać dane do metody webowej w Spring Boot?](blog/tg-blog-sb-jak-dostarczac-dane-do-metody-webowej-w-spring-boot.md)
++ [Czym jest Swagger i jak go skonfigurować w Spring Boot?](blog/tg-blog-sb-co-to-jest-swagger-i-jak-go-skonfigurowac.md)
