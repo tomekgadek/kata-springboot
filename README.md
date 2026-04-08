@@ -1,4 +1,4 @@
-# kata-springboot
+aa# kata-springboot
 
 ## Spring Boot Q&A
 
@@ -20,3 +20,4 @@
 + [Jakie mamy metody HTTP w Spring Boot?](blog/tg-blog-sb-jakie-mamy-metody-http-w-spring-boot.md)
 + [Jak dostarczać dane do metody webowej w Spring Boot?](blog/tg-blog-sb-jak-dostarczac-dane-do-metody-webowej-w-spring-boot.md)
 + [Czym jest Swagger i jak go skonfigurować w Spring Boot?](blog/tg-blog-sb-co-to-jest-swagger-i-jak-go-skonfigurowac.md)
++ [Czym jest wzorzec MVC?](blog/tg-blog-sb-czym-jest-wzorzec-mvc.md)
