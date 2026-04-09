@@ -21,3 +21,4 @@ aa# kata-springboot
 + [Jak dostarczać dane do metody webowej w Spring Boot?](blog/tg-blog-sb-jak-dostarczac-dane-do-metody-webowej-w-spring-boot.md)
 + [Czym jest Swagger i jak go skonfigurować w Spring Boot?](blog/tg-blog-sb-co-to-jest-swagger-i-jak-go-skonfigurowac.md)
 + [Czym jest wzorzec MVC?](blog/tg-blog-sb-czym-jest-wzorzec-mvc.md)
++ [Jak działa integracja Thymeleaf z Spring Boot?](blog/tg-blog-sb-jak-dziala-integracja-thymeleaf-z-spring-boot.md)
