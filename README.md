@@ -23,3 +23,4 @@ aa# kata-springboot
 + [Czym jest wzorzec MVC?](blog/tg-blog-sb-czym-jest-wzorzec-mvc.md)
 + [Jak działa integracja Thymeleaf z Spring Boot?](blog/tg-blog-sb-jak-dziala-integracja-thymeleaf-z-spring-boot.md)
 + [Co to jest klient HTTP?](blog/tg-blog-sb-co-to-jest-klient-http.md)
++ [Jak używać RestTemplate w Spring Boot?](blog/tg-blog-sb-jak-uzywac-rest-template.md)
