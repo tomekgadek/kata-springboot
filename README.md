@@ -24,3 +24,4 @@ aa# kata-springboot
 + [Jak działa integracja Thymeleaf z Spring Boot?](blog/tg-blog-sb-jak-dziala-integracja-thymeleaf-z-spring-boot.md)
 + [Co to jest klient HTTP?](blog/tg-blog-sb-co-to-jest-klient-http.md)
 + [Jak używać RestTemplate w Spring Boot?](blog/tg-blog-sb-jak-uzywac-rest-template.md)
++ [Jak używać exchange() w RestTemplate?](blog/tg-blog-sb-jak-uzywac-exchange-w-rest-template.md)
