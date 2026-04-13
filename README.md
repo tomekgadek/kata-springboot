@@ -25,3 +25,4 @@ aa# kata-springboot
 + [Co to jest klient HTTP?](blog/tg-blog-sb-co-to-jest-klient-http.md)
 + [Jak używać RestTemplate w Spring Boot?](blog/tg-blog-sb-jak-uzywac-rest-template.md)
 + [Jak używać exchange() w RestTemplate?](blog/tg-blog-sb-jak-uzywac-exchange-w-rest-template.md)
++ [Co to jest programowanie aspektowe?](blog/tg-blog-sb-co-to-jest-programowanie-aspektowe.md)
