@@ -26,6 +26,9 @@ Bez AOP taka logika rozrzuca się po całej aplikacji. AOP pozwala zebrać ją w
 @Component
 public class LoggingAspect {
 
+    // * - dowolny typ
+    // .. - dowolna liczba argumentów
+    // com.example.service.*.*(..)) - dowolna metoda w pakiecie com.example.service
     @Before("execution(* com.example.service.*.*(..))")
     public void logBefore(JoinPoint joinPoint) {
         System.out.println("Wywołano: " + joinPoint.getSignature().getName());

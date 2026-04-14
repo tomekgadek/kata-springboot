@@ -26,3 +26,4 @@ aa# kata-springboot
 + [Jak używać RestTemplate w Spring Boot?](blog/tg-blog-sb-jak-uzywac-rest-template.md)
 + [Jak używać exchange() w RestTemplate?](blog/tg-blog-sb-jak-uzywac-exchange-w-rest-template.md)
 + [Co to jest programowanie aspektowe?](blog/tg-blog-sb-co-to-jest-programowanie-aspektowe.md)
++ [Jakie adnotacje Advice mamy w AOP?](blog/tg-blog-sb-jakie-adnotacje-advice-mamy-w-aop.md)
