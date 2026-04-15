@@ -27,3 +27,4 @@ aa# kata-springboot
 + [Jak używać exchange() w RestTemplate?](blog/tg-blog-sb-jak-uzywac-exchange-w-rest-template.md)
 + [Co to jest programowanie aspektowe?](blog/tg-blog-sb-co-to-jest-programowanie-aspektowe.md)
 + [Jakie adnotacje Advice mamy w AOP?](blog/tg-blog-sb-jakie-adnotacje-advice-mamy-w-aop.md)
++ [Co to są schedulery i jak je definiować?](blog/tg-blog-sb-co-to-sa-schedulery-w-spring-boot.md)
