@@ -28,3 +28,4 @@ aa# kata-springboot
 + [Co to jest programowanie aspektowe?](blog/tg-blog-sb-co-to-jest-programowanie-aspektowe.md)
 + [Jakie adnotacje Advice mamy w AOP?](blog/tg-blog-sb-jakie-adnotacje-advice-mamy-w-aop.md)
 + [Co to są schedulery i jak je definiować?](blog/tg-blog-sb-co-to-sa-schedulery-w-spring-boot.md)
++ [Jak praktycznie korzystać z schedulerów w Spring Boot?](blog/tg-blog-sb-jak-praktycznie-korzystac-z-schedulerow.md)

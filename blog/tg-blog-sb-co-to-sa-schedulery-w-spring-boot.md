@@ -19,25 +19,11 @@ public class ReportJob {
 }
 ```
 
-`fixedRate` uruchamia metodę co N ms od startu poprzedniego wywołania (niezależnie od czasu jego trwania):
+Parametr `@Scheduled` określa tryb uruchamiania:
 
-```java
-@Scheduled(fixedRate = 5000)   // co 5 sekund
-public void tick() { ... }
-```
++ `fixedRate` - uruchamia metodę co N ms od startu poprzedniego wywołania (niezależnie od czasu jego trwania).
++ `fixedDelay` - uruchamia metodę co N ms od zakończenia poprzedniego wywołania.
++ `cron` - uruchamia metodę o określonej porze.
 
-`fixedDelay` uruchamia metodę co N ms od zakończenia poprzedniego wywołania:
 
-```java
-@Scheduled(fixedDelay = 5000)  // 5s przerwy po zakończeniu
-public void tick() { ... }
-```
-
-`cron` przyjmuje wyrażenie crontab w formacie `s m h d M dow`:
-
-```java
-@Scheduled(cron = "0 0 8 * * MON-FRI")  // pn-pt o 8:00
-public void morningReport() { ... }
-```
-
-> Użyj `fixedDelay` gdy zadanie może trwać różnie długo i nie chcesz nakładania wywołań. `fixedRate` gdy zależy ci na regularnym takcie. `cron` gdy musisz uderzyć o konkretnej godzinie.
+> Zadania cykliczne w Spring Boot możemy skonfigurować za pomocą dwóch adnotacji: `@EnableScheduling` i `@Scheduled` nad metodą, którą chcemy uruchamiać w tle z określonym interwałem.
