@@ -29,3 +29,4 @@ aa# kata-springboot
 + [Jakie adnotacje Advice mamy w AOP?](blog/tg-blog-sb-jakie-adnotacje-advice-mamy-w-aop.md)
 + [Co to są schedulery i jak je definiować?](blog/tg-blog-sb-co-to-sa-schedulery-w-spring-boot.md)
 + [Jak praktycznie korzystać z schedulerów w Spring Boot?](blog/tg-blog-sb-jak-praktycznie-korzystac-z-schedulerow.md)
++ [Czym jest JDBC?](blog/tg-blog-sb-czym-jest-jdbc.md)
