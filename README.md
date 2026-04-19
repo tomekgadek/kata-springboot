@@ -31,3 +31,4 @@ aa# kata-springboot
 + [Jak praktycznie korzystać z schedulerów w Spring Boot?](blog/tg-blog-sb-jak-praktycznie-korzystac-z-schedulerow.md)
 + [Czym jest JDBC?](blog/tg-blog-sb-czym-jest-jdbc.md)
 + [Co to jest Spring Data JPA?](blog/tg-blog-sb-co-to-jest-spring-data-jpa.md)
++ [Jak wygląda encja JPA?](blog/tg-blog-sb-jak-wyglada-encja-jpa.md)
