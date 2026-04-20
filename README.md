@@ -32,3 +32,4 @@ aa# kata-springboot
 + [Czym jest JDBC?](blog/tg-blog-sb-czym-jest-jdbc.md)
 + [Co to jest Spring Data JPA?](blog/tg-blog-sb-co-to-jest-spring-data-jpa.md)
 + [Jak wygląda encja JPA?](blog/tg-blog-sb-jak-wyglada-encja-jpa.md)
++ [Jak używać interfejs repozytorium JPA?](blog/tg-blog-sb-jak-uzywac-interfejs-repozytorium-jpa.md)
