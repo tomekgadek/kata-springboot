@@ -35,3 +35,4 @@ aa# kata-springboot
 + [Jak używać interfejs repozytorium JPA?](blog/tg-blog-sb-jak-uzywac-interfejs-repozytorium-jpa.md)
 + [W jaki sposób dodać konfigurację bazy danych w Spring Boot?](blog/tg-blog-sb-jak-dodac-konfiguracje-bazy-danych.md)
 + [Jaka jest różnica między relacją a związkiem pomiędzy encjami?](blog/tg-blog-sb-jaka-jest-roznica-miedzy-relacja-a-zwiazkiem.md)
++ [Jaka jest różnica między wiązaniem jednostronnym a dwustronnym?](blog/tg-blog-sb-jaka-jest-roznica-miedzy-wiazaniem-jednostronnym-a-dwustronnym.md)
