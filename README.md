@@ -37,3 +37,4 @@ aa# kata-springboot
 + [Jaka jest różnica między relacją a związkiem pomiędzy encjami?](blog/tg-blog-sb-jaka-jest-roznica-miedzy-relacja-a-zwiazkiem.md)
 + [Jaka jest różnica między wiązaniem jednostronnym a dwustronnym?](blog/tg-blog-sb-jaka-jest-roznica-miedzy-wiazaniem-jednostronnym-a-dwustronnym.md)
 + [Przykład implementacji 1:1 jednokierunkowej](blog/tg-blog-sb-przyklad-implementacji-1-1-jednokierunkowej.md)
++ [Przykład implementacji 1:1 dwukierunkowej](blog/tg-blog-sb-przyklad-implementacji-1-1-dwukierunkowej.md)
