@@ -17,7 +17,7 @@ public class Department {
 
     private String name;
 
-    // Relacja 1:N - Department jest właścicielem powiązania i posiada listę pracowników.
+    // Relacja 1:N - Dział jest właścicielem powiązania i posiada listę pracowników.
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     // Tworzy klucz obcy 'department_id' w tabeli 'employees' unikając dodatkowej tabeli łączącej
     @JoinColumn(name = "department_id") 
@@ -38,7 +38,7 @@ public class Employee {
     private String lastName;
 
     // Klasa Employee nie posiada referencji do Department.
-    // Nawigacja z poziomu pracownika do departamentu nie jest możliwa.
+    // Nawigacja z poziomu pracownika do działu nie jest możliwa.
 
     // ... gettery i settery
 }
