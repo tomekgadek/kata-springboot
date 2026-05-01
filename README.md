@@ -42,3 +42,4 @@ aa# kata-springboot
 + [Przykład implementacji 1:N dwukierunkowej](blog/tg-blog-sb-przyklad-implementacji-1-n-dwukierunkowej.md)
 + [Przykład implementacji N:1 jednokierunkowej](blog/tg-blog-sb-przyklad-implementacji-n-1-jednokierunkowej.md)
 + [Przykład implementacji N:1 dwukierunkowej](blog/tg-blog-sb-przyklad-implementacji-n-1-dwukierunkowej.md)
++ [Przykład implementacji N:N jednokierunkowej](blog/tg-blog-sb-przyklad-implementacji-n-n-jednokierunkowej.md)
