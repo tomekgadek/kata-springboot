@@ -45,3 +45,4 @@ aa# kata-springboot
 + [Przykład implementacji N:N jednokierunkowej](blog/tg-blog-sb-przyklad-implementacji-n-n-jednokierunkowej.md)
 + [Przykład implementacji N:N dwukierunkowej](blog/tg-blog-sb-przyklad-implementacji-n-n-dwukierunkowej.md)
 + [Czym jest NoSQL?](blog/tg-blog-sb-czym-jest-nosql.md)
++ [Porównanie RDBMS z MongoDB](blog/tg-blog-sb-porownanie-rdbms-z-mongodb.md)
