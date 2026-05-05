@@ -46,3 +46,4 @@ aa# kata-springboot
 + [Przykład implementacji N:N dwukierunkowej](blog/tg-blog-sb-przyklad-implementacji-n-n-dwukierunkowej.md)
 + [Czym jest NoSQL?](blog/tg-blog-sb-czym-jest-nosql.md)
 + [Porównanie RDBMS z MongoDB](blog/tg-blog-sb-porownanie-rdbms-z-mongodb.md)
++ [Jak skonfigurować MongoDB w Spring Boot?](blog/tg-blog-sb-jak-skonfigurowac-mongodb-w-spring-boot.md)
