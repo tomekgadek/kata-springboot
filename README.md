@@ -48,3 +48,4 @@ aa# kata-springboot
 + [Porównanie RDBMS z MongoDB](blog/tg-blog-sb-porownanie-rdbms-z-mongodb.md)
 + [Jak skonfigurować MongoDB w Spring Boot?](blog/tg-blog-sb-jak-skonfigurowac-mongodb-w-spring-boot.md)
 + [Jak wygląda mini aplikacja w Spring Boot oraz MongoDB?](blog/tg-blog-sb-jak-wyglada-mini-aplikacja-w-spring-boot-oraz-mongodb.md)
++ [Jakie mamy sposoby wiązania dokumentów w MongoDB używając Spring Boot?](blog/tg-blog-sb-jakie-mamy-sposoby-wiazania-dokumentow-w-mongodb.md)
