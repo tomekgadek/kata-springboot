@@ -50,3 +50,4 @@ aa# kata-springboot
 + [Jak wygląda mini aplikacja w Spring Boot oraz MongoDB?](blog/tg-blog-sb-jak-wyglada-mini-aplikacja-w-spring-boot-oraz-mongodb.md)
 + [Jakie mamy sposoby wiązania dokumentów w MongoDB używając Spring Boot?](blog/tg-blog-sb-jakie-mamy-sposoby-wiazania-dokumentow-w-mongodb.md)
 + [Co to jest MongoDB Compass?](blog/tg-blog-sb-co-to-jest-mongodb-compass.md)
++ [Czym jest Spring Security?](blog/tg-blog-sb-czym-jest-spring-security.md)
