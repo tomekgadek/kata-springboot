@@ -51,3 +51,4 @@ aa# kata-springboot
 + [Jakie mamy sposoby wiązania dokumentów w MongoDB używając Spring Boot?](blog/tg-blog-sb-jakie-mamy-sposoby-wiazania-dokumentow-w-mongodb.md)
 + [Co to jest MongoDB Compass?](blog/tg-blog-sb-co-to-jest-mongodb-compass.md)
 + [Czym jest Spring Security?](blog/tg-blog-sb-czym-jest-spring-security.md)
++ [Jakie podstawowe pojęcia związane są ze Spring Security?](blog/tg-blog-sb-jakie-podstawowe-pojecia-zwiazane-sa-ze-spring-security.md)
