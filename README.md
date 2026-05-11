@@ -52,3 +52,4 @@ aa# kata-springboot
 + [Co to jest MongoDB Compass?](blog/tg-blog-sb-co-to-jest-mongodb-compass.md)
 + [Czym jest Spring Security?](blog/tg-blog-sb-czym-jest-spring-security.md)
 + [Jakie podstawowe pojęcia związane są ze Spring Security?](blog/tg-blog-sb-jakie-podstawowe-pojecia-zwiazane-sa-ze-spring-security.md)
++ [Jak wygląda podstawowa konfiguracja z podziałem na role w Spring Security?](blog/tg-blog-sb-jak-wyglada-podstawowa-konfiguracja-z-podzialem-na-role-w-spring-security.md)
