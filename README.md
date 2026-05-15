@@ -56,3 +56,4 @@ aa# kata-springboot
 + [Co to jest mikroserwis?](blog/tg-blog-sb-co-to-jest-mikroserwis.md)
 + [Mikroserwis = SOA + DDD?](blog/tg-blog-sb-mikroserwis-soa-ddd.md)
 + [Co to jest DDD?](blog/tg-blog-sb-co-to-jest-ddd.md)
++ [Co to jest SOA?](blog/tg-blog-sb-co-to-jest-soa.md)
