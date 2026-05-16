@@ -57,3 +57,4 @@ aa# kata-springboot
 + [Mikroserwis = SOA + DDD?](blog/tg-blog-sb-mikroserwis-soa-ddd.md)
 + [Co to jest DDD?](blog/tg-blog-sb-co-to-jest-ddd.md)
 + [Co to jest SOA?](blog/tg-blog-sb-co-to-jest-soa.md)
++ [Jakie są zalety mikrousług?](blog/tg-blog-sb-jakie-sa-zalety-mikrouslug.md)
