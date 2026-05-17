@@ -58,3 +58,4 @@ aa# kata-springboot
 + [Co to jest DDD?](blog/tg-blog-sb-co-to-jest-ddd.md)
 + [Co to jest SOA?](blog/tg-blog-sb-co-to-jest-soa.md)
 + [Jakie są zalety mikrousług?](blog/tg-blog-sb-jakie-sa-zalety-mikrouslug.md)
++ [Jakie są wady mikrousług?](blog/tg-blog-sb-jakie-sa-wady-mikrouslug.md)
