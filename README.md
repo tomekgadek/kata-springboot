@@ -59,3 +59,4 @@ aa# kata-springboot
 + [Co to jest SOA?](blog/tg-blog-sb-co-to-jest-soa.md)
 + [Jakie są zalety mikrousług?](blog/tg-blog-sb-jakie-sa-zalety-mikrouslug.md)
 + [Jakie są wady mikrousług?](blog/tg-blog-sb-jakie-sa-wady-mikrouslug.md)
++ [Jak wygląda architektura mikroserwisów?](blog/tg-blog-sb-jak-wyglada-architektura-mikroserwisow.md)
