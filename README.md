@@ -60,3 +60,4 @@ aa# kata-springboot
 + [Jakie są zalety mikrousług?](blog/tg-blog-sb-jakie-sa-zalety-mikrouslug.md)
 + [Jakie są wady mikrousług?](blog/tg-blog-sb-jakie-sa-wady-mikrouslug.md)
 + [Jak wygląda architektura mikroserwisów?](blog/tg-blog-sb-jak-wyglada-architektura-mikroserwisow.md)
++ [Co to jest Spring Cloud?](blog/tg-blog-sb-co-to-jest-spring-cloud.md)
