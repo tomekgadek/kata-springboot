@@ -1,33 +1,28 @@
 # Co to jest Discovery Service?
 
-**Discovery Service** to mechanizm w architekturze mikroserwisów, który pozwala usługom automatycznie rejestrować się i odnajdywać nawzajem, bez ręcznego podawania adresów IP i portów. 
+**Discovery Service** to mechanizm w architekturze mikroserwisów, który pozwala usługom na automatyczną rejestrację i odnajdywanie się nawzajem, eliminując potrzebę ręcznego podawania adresów IP i portów. 
 
-W ekosystemie Spring Cloud najczęściej używa się do tego **Netflix Eureka**. Działa ona jak cyfrowa książka telefoniczna: serwis przy starcie zgłasza się do rejestru, a inne serwisy odpytują ten rejestr, by go znaleźć po nazwie.
+W ekosystemie Spring Cloud do tego celu najczęściej wykorzystywana jest usługa **Netflix Eureka**. Działa ona jako centralny rejestr: serwisy przy uruchomieniu zgłaszają swoją obecność, a inne serwisy komunikują się z nimi, używając ich nazw.
 
 ## Świat bez Eureki vs Świat z Eureką
 
-Aby zrozumieć, po co w ogóle nam ten mechanizm, wyobraźmy sobie scenariusz, w którym aplikacja `order-service` (Zamówienia) musi pobrać dane z `inventory-service` (Magazyn).
+Różnicę najlepiej zilustrować na przykładzie komunikacji dwóch aplikacji: `order-service` i `inventory-service`.
 
-**Świat BEZ Eureki (Sztywne adresy IP):**
-- **Konfiguracja:** W Zamówieniach musisz zapisać adres IP Magazynu na sztywno, np. `http://192.168.1.15:8080`.
-- **Awarie i restarty:** Jeśli serwer z Magazynem ulegnie awarii i chmura uruchomi go ponownie na innym adresie IP, musisz ręcznie zaktualizować konfigurację w Zamówieniach i zrestartować aplikację.
-- **Skalowanie:** Masz ogromny ruch i uruchamiasz 5 instancji Magazynu. Nagle w Zamówieniach musisz trzymać listę 5 różnych adresów IP i napisać własny mechanizm (lub wdrożyć osobny Load Balancer), aby rozdzielać między nimi zapytania.
+**Bez Eureki:**
+- **Konfiguracja:** Wymaga ręcznego wpisania adresu IP na sztywno (np. `http://192.168.1.15:8080`).
+- **Awarie i restarty:** Zmiana adresu IP po restarcie instancji wymaga aktualizacji konfiguracji w serwisach zależnych i ich ponownego uruchomienia.
+- **Skalowanie:** Uruchomienie wielu instancji danego serwisu wymusza zarządzanie pulą adresów IP oraz implementację load balancera.
 
-**Świat Z Eureką (Service Discovery):**
-- **Komunikacja po nazwie:** W Zamówieniach mówisz po prostu: *"Chcę uderzyć do serwisu o nazwie `inventory-service`"*. Adresy IP przestają mieć znaczenie.
-- **Dynamiczna rejestracja:** Kiedy uruchamiasz 5 instancji Magazynu, każda z nich sama zgłasza się do Eureki: *"Cześć, nazywam się `inventory-service` i działam pod adresem 10.0.0.5 na porcie 8081"*.
-- **Automatyczna odporność:** Jeśli jedna z instancji padnie, przestaje wysyłać tzw. "heartbeats" (bicie serca) do Eureki. Eureka po chwili wyrzuca ją ze swojej listy, dzięki czemu inne serwisy nie próbują już wysyłać tam zapytań.
-
----
-
-Aby to zobrazować w kodzie, stwórzmy dwie osobne aplikacje: **Serwer** (rejestr) oraz **Klienta** (nasz `inventory-service`).
+**Z Eureką:**
+- **Komunikacja po nazwie:** Wywołanie serwisu odbywa się za pomocą jego identyfikatora (np. `inventory-service`), a adres IP jest abstrakcją.
+- **Dynamiczna rejestracja:** Każda nowa instancja automatycznie zgłasza swój adres i port do rejestru Eureka.
+- **Automatyczna odporność:** Mechanizm heartbeats weryfikuje dostępność instancji. Niedostępne instancje są automatycznie usuwane z rejestru.
 
 ## 1. Eureka Server (Rejestr Usług)
 
-To nasza "książka telefoniczna", centralny punkt, w którym rejestrują się wszystkie inne mikroserwisy w systemie.
+Centralny punkt architektury, w którym rejestrują się pozostałe mikroserwisy.
 
-**Zależności Maven**
-Dodajemy zależność startową dla serwera Eureka:
+**Zależność Maven:**
 ```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
@@ -35,13 +30,9 @@ Dodajemy zależność startową dla serwera Eureka:
 </dependency>
 ```
 
-**Kod aplikacji**
-Główną klasę aplikacji oznaczamy adnotacją `@EnableEurekaServer`. To wystarczy, aby Spring Boot skonfigurował aplikację jako rejestr.
+**Kod aplikacji:**
+Adnotacja `@EnableEurekaServer` konfiguruje aplikację jako rejestr usług.
 ```java
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
-
 @SpringBootApplication
 @EnableEurekaServer
 public class ServiceRegistryApplication {
@@ -52,22 +43,19 @@ public class ServiceRegistryApplication {
 }
 ```
 
-**Konfiguracja właściwości**
-Serwer Eureka z definicji jest również swoim własnym klientem. Ponieważ to on jest głównym rejestrem, musimy powiedzieć mu, aby nie próbował rejestrować samego siebie.
+**Konfiguracja `application.properties`:**
+Wyłączenie rejestracji własnej instancji w Eurece.
 ```properties
 server.port=8761
 eureka.client.register-with-eureka=false
 eureka.client.fetch-registry=false
 ```
 
----
+## 2. Klient Eureka (Mikroserwis)
 
-## 2. Rejestracja mikroserwisu (Klient Eureka)
+Aplikacja pełniąca funkcję biznesową (np. `inventory-service`), która po uruchomieniu rejestruje się w serwerze Eureka.
 
-Stwórzmy docelową usługę biznesową – nasz `inventory-service`. Będzie ona klientem, który po uruchomieniu automatycznie poinformuje serwer Eureka o swoim istnieniu.
-
-**Zależności Maven**
-W projekcie klienta dodajemy odpowiednią zależność kliencką:
+**Zależność Maven:**
 ```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
@@ -75,16 +63,9 @@ W projekcie klienta dodajemy odpowiednią zależność kliencką:
 </dependency>
 ```
 
-**Kod aplikacji**
-Obecność zależności Eureki z reguły automatycznie rejestruje aplikację jako klienta, ale adnotacja `@EnableDiscoveryClient` czyni ten kod bardziej czytelnym. Dodatkowo stworzyliśmy prosty kontroler biznesowy, który reprezentuje realną funkcjonalność (sprawdzanie stanu w magazynie).
+**Kod aplikacji:**
+Adnotacja `@EnableDiscoveryClient` włącza mechanizm klienta.
 ```java
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-
 @SpringBootApplication
 @EnableDiscoveryClient
 public class InventoryServiceApplication {
@@ -99,27 +80,69 @@ class InventoryController {
     
     @GetMapping("/api/inventory/{productId}")
     public String checkStock(@PathVariable String productId) {
-        // Symulacja sprawdzenia bazy danych...
-        return "Produkt " + productId + " jest dostępny na magazynie (5 sztuk).";
+        return "Produkt " + productId + " jest dostępny.";
     }
 }
 ```
 
-**Konfiguracja właściwości**
-To najważniejszy krok po stronie klienta. Nadajemy aplikacji unikalną nazwę, pod którą będą szukać jej inne mikroserwisy, oraz wskazujemy, gdzie działa nasza główna Eureka (adres rejestru).
+**Konfiguracja `application.properties`:**
+Definicja nazwy aplikacji i adresu głównego serwera Eureka.
 ```properties
-# Port aplikacji klienckiej
 server.port=8081
-
-# Nazwa, po której inne mikroserwisy odnajdą tę usługę
 spring.application.name=inventory-service
-
-# Adres serwera Eureka
 eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
 ```
 
----
+Po uruchomieniu obu projektów, `inventory-service` zarejestruje się w Eureka Server. Panel zarządzania Eureki pod adresem `http://localhost:8761` wyświetli wpis dotyczący instancji `INVENTORY-SERVICE`.
 
-Po uruchomieniu obu aplikacji, usługa `inventory-service` automatycznie zarejestruje się w Eureka Server. Jeśli wejdziesz w przeglądarce pod adres `http://localhost:8761`, zobaczysz graficzny panel Eureki, a na liście zarejestrowanych instancji (tzw. "Instances currently registered with Eureka") dumnie widnieć będzie wpis `INVENTORY-SERVICE`.
+## 3. Komunikacja między serwisami
 
-> Service Discovery, realizowane np. poprzez Netflix Eureka, to fundament chmurowych aplikacji. Rezygnacja ze sztywnych adresów IP na rzecz dynamicznego rejestru i wywoływania po nazwach sprawia, że mikroserwisy stają się elastyczne, odporne na awarie i mogą bez problemu skalować się w locie. To tak naprawdę pierwszy krok w budowie profesjonalnej i w pełni zautomatyzowanej architektury rozproszonej.
+Gdy `inventory-service` jest zarejestrowany w Eurece, inne aplikacje (np. wspomniany wcześniej `order-service`) mogą z nim łatwo porozmawiać. 
+
+Najpopularniejszym sposobem jest użycie klienta HTTP (np. `RestTemplate`) z adnotacją `@LoadBalanced`. Spring pod spodem odpyta Eurekę i automatycznie podmieni nazwę serwisu na jego fizyczny adres IP przed wykonaniem zapytania.
+
+**Konfiguracja klienta w `order-service`:**
+```java
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+class RestTemplateConfig {
+
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+```
+
+**Wywołanie usługi po nazwie:**
+```java
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+class OrderController {
+
+    private final RestTemplate restTemplate;
+
+    public OrderController(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    @GetMapping("/api/orders/check")
+    public String checkInventoryForOrder() {
+        // Używamy nazwy serwisu "inventory-service" zamiast sztywnego adresu IP!
+        String url = "http://inventory-service/api/inventory/123";
+        return restTemplate.getForObject(url, String.class);
+    }
+}
+```
+
+Dzięki temu `order-service` jest w pełni niezależny od adresów IP infrastruktury, w której został uruchomiony.
+
+> Service Discovery to kluczowy element architektur rozproszonych. Eliminuje problemy ze sztywnymi adresami IP, wprowadzając elastyczność i skalowalność, niezbędne w profesjonalnych wdrożeniach chmurowych.
