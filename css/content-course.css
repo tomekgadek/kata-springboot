@@ -1,0 +1,78 @@
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    align-content: start;
+    align-items: start;
+    flex: 1;
+}
+
+.course-grid div {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.course-grid div:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f9f8f8;
+}
+
+.course-grid h3 {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.course-grid p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .course-grid div {
+        border-radius: 10px;
+        margin: 0;
+    }
+}
+
+/* Kolorystyka tagów na stronie głównej wg logo */
+.course-grid div[data-tag="spring-boot"] {
+    border-top: 6px solid #006d77;
+}
+
+.course-grid div[data-tag="about-me"] {
+    border-top: 6px solid #4ecdc4;
+    background-color: #d1f2eb;
+}
+
+.course-grid div[data-tag="policy"] {
+    border-top: 6px solid #1a535c;
+    background-color: #d8f3dc;
+}

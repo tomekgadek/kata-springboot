@@ -1,4 +1,4 @@
-aa# kata-springboot
+# kata-springboot
 
 ## Spring Boot Q&A
 
