@@ -1,4 +1,4 @@
-# Przykład implementacji N:N dwukierunkowej
+# JPA: Relacja N:N dwukierunkowa
 
 Wiązanie dwukierunkowe (bidirectional) w relacji Many-to-Many (N:N) oznacza, że obie strony relacji posiadają informacje o sobie nawzajem. Jedna encja przechowuje kolekcję drugiej, a druga encja posiada kolekcję pierwszej. Na poziomie bazy danych wciąż wymaga to tylko jednej tabeli łączącej (join table), ale w kodzie Javy zyskujemy możliwość nawigacji w obu kierunkach.
 

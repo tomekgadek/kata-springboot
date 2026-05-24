@@ -1,4 +1,4 @@
-# Przykład implementacji N:1 dwukierunkowej
+# JPA: Relacja N:1 dwukierunkowa
 
 Wiązanie dwukierunkowe (bidirectional) w relacji Many-to-One (N:1) to z technicznego punktu widzenia dokładnie ta sama relacja co One-to-Many (1:N) dwukierunkowa. Różnica polega jedynie na perspektywie, z której na nią patrzymy. W tym przypadku skupiamy się na encji dziecka (strona `N`), która jest właścicielem relacji i posiada klucz obcy, ale jednocześnie encja rodzica (strona `1`) posiada kolekcję dzieci.
 

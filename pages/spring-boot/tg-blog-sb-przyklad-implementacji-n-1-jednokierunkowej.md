@@ -1,4 +1,4 @@
-# Przykład implementacji N:1 jednokierunkowej
+# JPA: Relacja N:1 jednokierunkowa
 
 Wiązanie jednokierunkowe (unidirectional) w relacji Many-to-One (N:1) oznacza, że wiele encji (dzieci) przechowuje referencję do jednej encji (rodzica), ale encja rodzica nie posiada kolekcji swoich dzieci. Jest to jedna z najczęściej stosowanych, najprostszych i najbardziej wydajnych relacji w bazach danych i JPA, ponieważ odzwierciedla naturalny układ tabel (tabela przechowuje klucz obcy).
 

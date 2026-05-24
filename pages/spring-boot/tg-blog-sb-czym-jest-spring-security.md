@@ -4,11 +4,11 @@
 
 ## Główne zadania Spring Security
 
-1. **Uwierzytelnianie (Authentication):** Proces weryfikacji tożsamości użytkownika ("Kim jesteś?"). Framework wspiera wiele metod, m.in. logowanie formularzowe, Basic Auth, OAuth2, JWT czy logowanie przez LDAP.
+1. **Uwierzytelnianie (Authentication):** Proces weryfikacji tożsamości użytkownika ("Kim jesteś?"). Framework wspiera wiele metod, m.in. logowanie formularzowe, Basic Auth, OAuth2, `JWT` czy logowanie przez `LDAP`.
 2. **Autoryzacja (Authorization):** Proces sprawdzania uprawnień ("Co wolno Ci zrobić?"). Pozwala na określenie, którzy użytkownicy lub role mają dostęp do konkretnych zasobów (URL-i, metod w klasach).
 3. **Ochrona przed atakami:** Spring Security automatycznie chroni aplikację przed popularnymi lukami w zabezpieczeniach, takimi jak:
-   - **CSRF** (Cross-Site Request Forgery)
-   - **CORS** (Cross-Origin Resource Sharing)
+   - **`CSRF`** (Cross-Site Request Forgery)
+   - **`CORS`** (Cross-Origin Resource Sharing)
    - **Session Fixation**
 
 ## Kluczowe pojęcia

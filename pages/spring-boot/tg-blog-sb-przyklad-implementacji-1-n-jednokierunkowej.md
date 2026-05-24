@@ -1,4 +1,4 @@
-# Przykład implementacji 1:N jednokierunkowej
+# JPA: Relacja 1:N jednokierunkowa
 
 Wiązanie jednokierunkowe (unidirectional) w relacji One-to-Many (1:N) oznacza, że encja rodzica posiada kolekcję encji dzieci, ale encje dzieci nie posiadają referencji zwrotnej do rodzica. W tym podejściu nawigacja pomiędzy obiektami w kodzie możliwa jest tylko od strony rodzica do dziecka.
 

@@ -1,4 +1,4 @@
-# Przykład implementacji 1:1 dwukierunkowej
+# JPA: Relacja 1:1 dwukierunkowa
 
 Wiązanie dwukierunkowe (bidirectional) w relacji One-to-One (1:1) oznacza, że obie encje z pary posiadają referencję do siebie nawzajem. W tym podejściu nawigacja pomiędzy obiektami w kodzie możliwa jest w obu kierunkach (np. od użytkownika do adresu, jak i od adresu do użytkownika).
 

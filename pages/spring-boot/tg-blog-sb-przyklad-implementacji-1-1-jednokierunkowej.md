@@ -1,4 +1,4 @@
-# Przykład implementacji 1:1 jednokierunkowej
+# JPA: Relacja 1:1 jednokierunkowa
 
 Wiązanie jednokierunkowe (unidirectional) w relacji One-to-One (1:1) oznacza, że tylko jedna encja z pary posiada referencję do drugiej. W tym podejściu nawigacja pomiędzy obiektami w kodzie możliwa jest tylko w jednym kierunku.
 

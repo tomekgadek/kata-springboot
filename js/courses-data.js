@@ -5,84 +5,74 @@ const coursesData = [
         "title": "O mnie"
     },
     {
-        "tag": "policy",
-        "filename": "policy/tg-blog-am-polityka-prywatnosci",
-        "title": "Polityka prywatno\u015bci"
-    },
-    {
-        "tag": "policy",
-        "filename": "policy/tg-blog-am-regulamin",
-        "title": "Regulamin serwisu"
-    },
-    {
-        "tag": "spring-boot",
+        "tag": "security",
         "filename": "spring-boot/tg-blog-sb-czym-jest-spring-security",
         "title": "Czym jest Spring Security?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-przyklad-implementacji-1-1-jednokierunkowej",
-        "title": "Przyk\u0142ad implementacji 1:1 jednokierunkowej"
+        "title": "JPA: Relacja 1:1 jednokierunkowa"
     },
     {
-        "tag": "spring-boot",
+        "tag": "rest",
         "filename": "spring-boot/tg-blog-sb-jak-uzywac-exchange-w-rest-template",
-        "title": "Jak u\u017cywa\u0107 exchange() w RestTemplate?"
+        "title": "Jak używać exchange() w RestTemplate?"
     },
     {
-        "tag": "spring-boot",
+        "tag": "database",
         "filename": "spring-boot/tg-blog-sb-jak-skonfigurowac-mongodb-w-spring-boot",
-        "title": "Jak skonfigurowa\u0107 MongoDB w Spring Boot?"
+        "title": "Jak skonfigurować MongoDB w Spring Boot?"
     },
     {
-        "tag": "spring-boot",
+        "tag": "database",
         "filename": "spring-boot/tg-blog-sb-jakie-mamy-sposoby-wiazania-dokumentow-w-mongodb",
-        "title": "Jakie mamy sposoby wi\u0105zania dokument\u00f3w w MongoDB u\u017cywaj\u0105c Spring Boot?"
+        "title": "Jakie mamy sposoby wiązania dokumentów w MongoDB używając Spring Boot?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-przyklad-implementacji-n-1-jednokierunkowej",
-        "title": "Przyk\u0142ad implementacji N:1 jednokierunkowej"
+        "title": "JPA: Relacja N:1 jednokierunkowa"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-dziala-integracja-thymeleaf-z-spring-boot",
-        "title": "Jak dzia\u0142a integracja Thymeleaf z Spring Boot?"
+        "title": "Jak działa integracja Thymeleaf z Spring Boot?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-przyklad-implementacji-1-n-dwukierunkowej",
-        "title": "Przyk\u0142ad implementacji 1:N dwukierunkowej"
+        "title": "JPA: Relacja 1:N dwukierunkowa"
     },
     {
-        "tag": "spring-boot",
+        "tag": "architecture",
         "filename": "spring-boot/tg-blog-sb-jakie-sa-zalety-mikrouslug",
-        "title": "Jakie s\u0105 zalety mikrous\u0142ug?"
+        "title": "Jakie są zalety mikrousług?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-dodac-konfiguracje-bazy-danych",
-        "title": "W jaki spos\u00f3b doda\u0107 konfiguracj\u0119 bazy danych w Spring Boot?"
+        "title": "W jaki sposób dodać konfigurację bazy danych w Spring Boot?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jaka-jest-roznica-miedzy-wiazaniem-jednostronnym-a-dwustronnym",
-        "title": "Jaka jest r\u00f3\u017cnica mi\u0119dzy wi\u0105zaniem jednostronnym a dwustronnym?"
+        "title": "Jaka jest różnica między wiązaniem jednostronnym a dwustronnym?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-sa-stereotypy-w-spring",
-        "title": "Co to s\u0105 stereotypy w Spring?"
+        "title": "Co to są stereotypy w Spring?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-wyglada-architektura-mikroserwisow",
-        "title": "Jak wygl\u0105da architektura mikroserwis\u00f3w?"
+        "title": "Jak wygląda architektura mikroserwisów?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-zarzadzac-konfiguracja-w-spring-boot",
-        "title": "Jak zarz\u0105dza\u0107 konfiguracj\u0105 w Spring Boot?"
+        "title": "Jak zarządzać konfiguracją w Spring Boot?"
     },
     {
         "tag": "spring-boot",
@@ -97,7 +87,7 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jaka-jest-roznica-miedzy-relacja-a-zwiazkiem",
-        "title": "Jaka jest r\u00f3\u017cnica mi\u0119dzy relacj\u0105 a zwi\u0105zkiem pomi\u0119dzy encjami?"
+        "title": "Jaka jest różnica między relacją a związkiem pomiędzy encjami?"
     },
     {
         "tag": "spring-boot",
@@ -117,17 +107,17 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-przyklad-implementacji-1-1-dwukierunkowej",
-        "title": "Przyk\u0142ad implementacji 1:1 dwukierunkowej"
+        "title": "JPA: Relacja 1:1 dwukierunkowa"
     },
     {
-        "tag": "spring-boot",
+        "tag": "database",
         "filename": "spring-boot/tg-blog-sb-jak-wyglada-mini-aplikacja-w-spring-boot-oraz-mongodb",
-        "title": "Jak wygl\u0105da mini aplikacja w Spring Boot oraz MongoDB?"
+        "title": "Jak wygląda mini aplikacja w Spring Boot oraz MongoDB?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-sa-schedulery-w-spring-boot",
-        "title": "Co to s\u0105 schedulery i jak je definiowa\u0107?"
+        "title": "Co to są schedulery i jak je definiować?"
     },
     {
         "tag": "spring-boot",
@@ -137,12 +127,12 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jaka-jest-roznica-miedzy-beanem-a-pojo",
-        "title": "Jaka jest r\u00f3\u017cnica mi\u0119dzy beanem a POJO?"
+        "title": "Jaka jest różnica między beanem a POJO?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jakie-mamy-sposoby-wstrzykiwania-zaleznosci-w-spring",
-        "title": "Jakie mamy sposoby wstrzykiwania zale\u017cno\u015bci w Spring?"
+        "title": "Jakie mamy sposoby wstrzykiwania zależności w Spring?"
     },
     {
         "tag": "spring-boot",
@@ -152,7 +142,7 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-wczytywac-konfiguracje-w-spring-boot",
-        "title": "Jak wczytywa\u0107 konfiguracj\u0119 w Spring Boot?"
+        "title": "Jak wczytywać konfigurację w Spring Boot?"
     },
     {
         "tag": "spring-boot",
@@ -162,12 +152,12 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-wstrzykiwac-zaleznosci-przez-wlasciwosc-w-spring",
-        "title": "Jak wstrzykiwa\u0107 zale\u017cno\u015bci przez w\u0142a\u015bciwo\u015b\u0107 w Spring?"
+        "title": "Jak wstrzykiwać zależności przez właściwość w Spring?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-przyklad-implementacji-1-n-jednokierunkowej",
-        "title": "Przyk\u0142ad implementacji 1:N jednokierunkowej"
+        "title": "JPA: Relacja 1:N jednokierunkowa"
     },
     {
         "tag": "spring-boot",
@@ -177,27 +167,27 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-zaimplementowac-rest-w-spring-boot",
-        "title": "Jak zaimplementowa\u0107 REST w Spring Boot?"
+        "title": "Jak zaimplementować REST w Spring Boot?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-przyklad-implementacji-n-n-jednokierunkowej",
-        "title": "Przyk\u0142ad implementacji N:N jednokierunkowej"
+        "title": "JPA: Relacja N:N jednokierunkowa"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-przyklad-implementacji-n-n-dwukierunkowej",
-        "title": "Przyk\u0142ad implementacji N:N dwukierunkowej"
+        "title": "JPA: Relacja N:N dwukierunkowa"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-zdefiniowac-beana-w-kodzie",
-        "title": "Jak zdefiniowa\u0107 beana w kodzie?"
+        "title": "Jak zdefiniować beana w kodzie?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jakie-podstawowe-pojecia-zwiazane-sa-ze-spring-security",
-        "title": "Jakie podstawowe poj\u0119cia zwi\u0105zane s\u0105 ze Spring Security?"
+        "title": "Jakie podstawowe pojęcia związane są ze Spring Security?"
     },
     {
         "tag": "spring-boot",
@@ -207,17 +197,17 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-wstrzykiwac-zaleznosci-przez-konstruktor-w-spring",
-        "title": "Jak wstrzykiwa\u0107 zale\u017cno\u015bci przez konstruktor w Spring?"
+        "title": "Jak wstrzykiwać zależności przez konstruktor w Spring?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-praktycznie-korzystac-z-schedulerow",
-        "title": "Jak praktycznie korzysta\u0107 z scheduler\u00f3w w Spring Boot?"
+        "title": "Jak praktycznie korzystać z schedulerów w Spring Boot?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-wstrzykiwac-zaleznosci-przez-pole-w-spring",
-        "title": "Jak wstrzykiwa\u0107 zale\u017cno\u015bci przez pole w Spring?"
+        "title": "Jak wstrzykiwać zależności przez pole w Spring?"
     },
     {
         "tag": "spring-boot",
@@ -227,27 +217,27 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-uzywac-rest-template",
-        "title": "Jak u\u017cywa\u0107 RestTemplate w Spring Boot?"
+        "title": "Jak używać RestTemplate w Spring Boot?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-uzywac-interfejs-repozytorium-jpa",
-        "title": "Jak u\u017cywa\u0107 interfejs repozytorium JPA?"
+        "title": "Jak używać interfejs repozytorium JPA?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jakie-sa-wady-mikrouslug",
-        "title": "Jakie s\u0105 wady mikrous\u0142ug?"
+        "title": "Jakie są wady mikrousług?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-wyglada-podstawowa-konfiguracja-z-podzialem-na-role-w-spring-security",
-        "title": "Jak wygl\u0105da podstawowa konfiguracja z podzia\u0142em na role w Spring Security?"
+        "title": "Jak wygląda podstawowa konfiguracja z podziałem na role w Spring Security?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-mechanizm-wstrzykiwania-zaleznosci",
-        "title": "Co to jest mechanizm wstrzykiwania zale\u017cno\u015bci w Spring?"
+        "title": "Co to jest mechanizm wstrzykiwania zależności w Spring?"
     },
     {
         "tag": "spring-boot",
@@ -257,17 +247,17 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-przyklad-implementacji-n-1-dwukierunkowej",
-        "title": "Przyk\u0142ad implementacji N:1 dwukierunkowej"
+        "title": "JPA: Relacja N:1 dwukierunkowa"
     },
     {
-        "tag": "spring-boot",
+        "tag": "database",
         "filename": "spring-boot/tg-blog-sb-porownanie-rdbms-z-mongodb",
-        "title": "Por\u00f3wnanie RDBMS z MongoDB"
+        "title": "Porównanie RDBMS z MongoDB"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-wyglada-encja-jpa",
-        "title": "Jak wygl\u0105da encja JPA?"
+        "title": "Jak wygląda encja JPA?"
     },
     {
         "tag": "spring-boot",
@@ -275,7 +265,7 @@ const coursesData = [
         "title": "Czym jest wzorzec MVC?"
     },
     {
-        "tag": "spring-boot",
+        "tag": "database",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-mongodb-compass",
         "title": "Co to jest MongoDB Compass?"
     },
@@ -297,12 +287,12 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-dziala-request-mapping-na-poziomie-klasy",
-        "title": "Jak dzia\u0142a @RequestMapping na poziomie klasy?"
+        "title": "Jak działa @RequestMapping na poziomie klasy?"
     },
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-dostarczac-dane-do-metody-webowej-w-spring-boot",
-        "title": "Jak dostarcza\u0107 dane do metody webowej w Spring Boot?"
+        "title": "Jak dostarczać dane do metody webowej w Spring Boot?"
     },
     {
         "tag": "spring-boot",
@@ -312,7 +302,7 @@ const coursesData = [
     {
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-swagger-i-jak-go-skonfigurowac",
-        "title": "Czym jest Swagger i jak go skonfigurowa\u0107 w Spring Boot?"
+        "title": "Czym jest Swagger i jak go skonfigurować w Spring Boot?"
     },
     {
         "tag": "spring-boot",

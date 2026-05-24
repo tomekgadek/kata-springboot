@@ -29,7 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 marked.use({ renderer });
 
                 // Wykorzystanie biblioteki marked do parsowania markdown
-                contentDiv.innerHTML = marked.parse(text);
+                
+                const githubUrl = `https://github.com/tomekgadek/kata-springboot/blob/master/pages/${postFile}.md`;
+                const githubLinkHtml = `<div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #eaeaea; text-align: center; font-size: 0.85em; color: #888;">
+                    Zobacz lub edytuj ten wpis na <a href="${githubUrl}" target="_blank" style="color: #888; text-decoration: underline;">GitHubie</a>
+                </div>`;
+                contentDiv.innerHTML = marked.parse(text) + githubLinkHtml;
                 
                 // Uruchomienie kolorowania składni
                 if (typeof hljs !== 'undefined') {
@@ -42,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const match = text.match(/^#\s+(.*)/);
                 if(match) {
                     const postTitle = match[1].trim();
-                    document.title = postTitle + " | Kata Spring Boot";
+                    document.title = postTitle + " | Spring Boot TL;DR";
                     if (subtitleElem) {
                         subtitleElem.textContent = postTitle;
                     }

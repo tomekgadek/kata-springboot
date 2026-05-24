@@ -1,4 +1,4 @@
-# Przykład implementacji N:N jednokierunkowej
+# JPA: Relacja N:N jednokierunkowa
 
 Wiązanie jednokierunkowe (unidirectional) w relacji Many-to-Many (N:N) oznacza, że jedna encja przechowuje kolekcję drugiej encji, ale druga z nich nie ma informacji o tej relacji. Na poziomie bazy danych relacyjnej wymaga to zawsze utworzenia dodatkowej tabeli łączącej (join table), która przechowuje klucze obce z obu powiązanych tabel.
 

@@ -1,4 +1,4 @@
-# Przykład implementacji 1:N dwukierunkowej
+# JPA: Relacja 1:N dwukierunkowa
 
 Wiązanie dwukierunkowe (bidirectional) w relacji One-to-Many (1:N) oznacza, że obie encje są świadome swojego istnienia. Encja rodzica posiada kolekcję encji dzieci, a z kolei każda encja dziecka przechowuje referencję zwrotną do rodzica. Dzięki temu nawigacja w kodzie jest możliwa w obu kierunkach.
 
