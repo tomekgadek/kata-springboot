@@ -308,5 +308,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-spring-boot",
         "title": "Co to jest Spring Boot?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-ribbon",
+        "title": "Co to jest Ribbon?"
     }
 ];
