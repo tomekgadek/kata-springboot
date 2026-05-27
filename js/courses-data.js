@@ -313,5 +313,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-ribbon",
         "title": "Co to jest Ribbon?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-piramida-testow",
+        "title": "Co to jest piramida testów?"
     }
 ];
