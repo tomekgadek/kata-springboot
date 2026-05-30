@@ -328,5 +328,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-sa-testy-integracyjne",
         "title": "Co to są testy integracyjne?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-sa-testy-e2e",
+        "title": "Co to są testy E2E?"
     }
 ];
