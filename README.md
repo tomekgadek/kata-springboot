@@ -63,3 +63,8 @@
 + [Co to jest Spring Cloud?](blog/tg-blog-sb-co-to-jest-spring-cloud.md)
 + [Co to jest Discovery Service?](blog/tg-blog-sb-co-to-jest-discovery-service.md)
 + [Co to jest API Gateway?](blog/tg-blog-sb-co-to-jest-api-gateway.md)
++ [Co to jest Ribbon?](blog/tg-blog-sb-co-to-jest-ribbon.md)
++ [Co to jest piramida testów?](blog/tg-blog-sb-co-to-jest-piramida-testow.md)
++ [Co to są testy jednostkowe?](blog/tg-blog-sb-co-to-sa-testy-jednostkowe.md)
++ [Co to są testy integracyjne?](blog/tg-blog-sb-co-to-sa-testy-integracyjne.md)
++ [Co to są testy E2E?](blog/tg-blog-sb-co-to-sa-testy-e2e.md)

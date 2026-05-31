@@ -57,3 +57,4 @@ Aby nowa strona była poprawnie odnajdywana i indeksowana przez przeglądarki i 
 - [ ] Utworzono plik z treścią (z rozszerzeniem `.md`) w folderze `pages/`
 - [ ] Zaktualizowano strukturę w pliku `courses-data.js` (uważając na przecinki, a wartość klucza `filename` nie ma rozszerzenia `.md`)
 - [ ] Zaktualizowano `sitemap.xml` dodając odpowiedni adres URL z poprawną ścieżką posta (wewnątrz tagu `<loc>`)
+- [ ] Zaktualizowano `README.md` dodając link do nowego wpisu na liście
