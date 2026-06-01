@@ -333,5 +333,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-sa-testy-e2e",
         "title": "Co to są testy E2E?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-diament-w-kontekscie-testowania",
+        "title": "Co to jest diament w kontekście testowania?"
     }
 ];

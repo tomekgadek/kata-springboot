@@ -68,3 +68,4 @@
 + [Co to są testy jednostkowe?](blog/tg-blog-sb-co-to-sa-testy-jednostkowe.md)
 + [Co to są testy integracyjne?](blog/tg-blog-sb-co-to-sa-testy-integracyjne.md)
 + [Co to są testy E2E?](blog/tg-blog-sb-co-to-sa-testy-e2e.md)
++ [Co to jest diament w kontekście testowania?](blog/tg-blog-sb-co-to-jest-diament-w-kontekscie-testowania.md)
