@@ -338,5 +338,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-diament-w-kontekscie-testowania",
         "title": "Co to jest diament w kontekście testowania?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-trofeum-w-kontekscie-testowania",
+        "title": "Co to jest trofeum w kontekście testowania?"
     }
 ];
