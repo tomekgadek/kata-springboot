@@ -343,5 +343,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-trofeum-w-kontekscie-testowania",
         "title": "Co to jest trofeum w kontekście testowania?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-jak-wygladaja-testy-jednostkowe-w-spring-boot",
+        "title": "Jak wyglądają testy jednostkowe w Spring Boot?"
     }
 ];
