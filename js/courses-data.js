@@ -348,5 +348,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-jak-wygladaja-testy-jednostkowe-w-spring-boot",
         "title": "Jak wyglądają testy jednostkowe w Spring Boot?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-junit",
+        "title": "Co to jest JUnit?"
     }
 ];
