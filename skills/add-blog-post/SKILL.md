@@ -13,6 +13,7 @@ Ta umiejętność definiuje kroki niezbędne do poprawnego dodania nowego posta 
 Treść wszystkich wpisów przechowywana jest w plikach z rozszerzeniem Markdown (`.md`) wewnątrz katalogu `pages/`. Na przykład wpisy dotyczące Spring Boot umieszczane są w `pages/spring-boot/`.
 *   **Katalog:** `pages/<kategoria>/` (np. `pages/spring-boot/` lub `pages/about-me/`)
 *   **Nazwa pliku:** Powinna być w formacie kebab-case i mieć rozszerzenie `.md` (np. `tg-blog-sb-nowy-temat.md`).
+*   **Styl i język:** Wszelkie wpisy mają być pisane prostym i zwięzłym językiem. Krótko, prosto i na temat. Skupiaj się na "mięsie informacyjnym", unikaj długich myślników i lania wody. Używaj normalnego słownictwa z branży IT.
 *   **Akcja:** Utwórz nowy plik `.md` we właściwym folderze i umieść w nim treść posta w formacie Markdown.
 
 ### 2. Aktualizacja pliku z danymi wpisów (`js/courses-data.js`)

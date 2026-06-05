@@ -353,5 +353,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-junit",
         "title": "Co to jest JUnit?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-mockito",
+        "title": "Co to jest Mockito?"
     }
 ];
