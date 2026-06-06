@@ -73,3 +73,4 @@
 + [Jak wyglądają testy jednostkowe w Spring Boot?](blog/tg-blog-sb-jak-wygladaja-testy-jednostkowe-w-spring-boot.md)
 + [Co to jest JUnit?](blog/tg-blog-sb-co-to-jest-junit.md)
 + [Co to jest Mockito?](blog/tg-blog-sb-co-to-jest-mockito.md)
++ [Co to jest AssertJ?](blog/tg-blog-sb-co-to-jest-assertj.md)

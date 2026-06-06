@@ -358,5 +358,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-mockito",
         "title": "Co to jest Mockito?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-assertj",
+        "title": "Co to jest AssertJ?"
     }
 ];
