@@ -363,5 +363,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-assertj",
         "title": "Co to jest AssertJ?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-hamcrest",
+        "title": "Co to jest Hamcrest?"
     }
 ];
