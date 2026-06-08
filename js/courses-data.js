@@ -368,5 +368,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-hamcrest",
         "title": "Co to jest Hamcrest?"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-przyklad-zastosowania-adnotacji-springboot-test",
+        "title": "Przykład zastosowania adnotacji @SpringBootTest"
     }
 ];
