@@ -373,5 +373,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-przyklad-zastosowania-adnotacji-springboot-test",
         "title": "Przykład zastosowania adnotacji @SpringBootTest"
+    },
+    {
+        "tag": "spring-boot",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-spring-webflux-framework",
+        "title": "Co to jest Spring WebFlux Framework?"
     }
 ];

@@ -76,3 +76,4 @@
 + [Co to jest AssertJ?](pages/spring-boot/tg-blog-sb-co-to-jest-assertj.md)
 + [Co to jest Hamcrest?](pages/spring-boot/tg-blog-sb-co-to-jest-hamcrest.md)
 + [Przykład zastosowania adnotacji @SpringBootTest](pages/spring-boot/tg-blog-sb-przyklad-zastosowania-adnotacji-springboot-test.md)
++ [Co to jest Spring WebFlux Framework?](pages/spring-boot/tg-blog-sb-co-to-jest-spring-webflux-framework.md)
