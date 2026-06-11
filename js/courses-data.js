@@ -378,5 +378,10 @@ const coursesData = [
         "tag": "spring-boot",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-spring-webflux-framework",
         "title": "Co to jest Spring WebFlux Framework?"
+    },
+    {
+        "tag": "architecture",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-docker",
+        "title": "Co to jest Docker?"
     }
 ];
