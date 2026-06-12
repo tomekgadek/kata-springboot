@@ -383,5 +383,10 @@ const coursesData = [
         "tag": "architecture",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-docker",
         "title": "Co to jest Docker?"
+    },
+    {
+        "tag": "architecture",
+        "filename": "spring-boot/tg-blog-sb-docker-przyklad-zastosowania",
+        "title": "Docker - przykład zastosowania"
     }
 ];
