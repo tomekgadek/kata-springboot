@@ -388,5 +388,10 @@ const coursesData = [
         "tag": "architecture",
         "filename": "spring-boot/tg-blog-sb-docker-przyklad-zastosowania",
         "title": "Docker - przykład zastosowania"
+    },
+    {
+        "tag": "architecture",
+        "filename": "spring-boot/tg-blog-sb-docker-budowa-i-uruchomienie-obrazu-od-podszewki",
+        "title": "Docker - budowa i uruchomienie obrazu od podszewki"
     }
 ];
