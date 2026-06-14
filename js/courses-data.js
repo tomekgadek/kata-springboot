@@ -393,5 +393,10 @@ const coursesData = [
         "tag": "architecture",
         "filename": "spring-boot/tg-blog-sb-docker-budowa-i-uruchomienie-obrazu-od-podszewki",
         "title": "Docker - budowa i uruchomienie obrazu od podszewki"
+    },
+    {
+        "tag": "architecture",
+        "filename": "spring-boot/tg-blog-sb-docker-compose-od-podszewki",
+        "title": "Docker compose od podszewki"
     }
 ];
