@@ -398,5 +398,10 @@ const coursesData = [
         "tag": "architecture",
         "filename": "spring-boot/tg-blog-sb-docker-compose-od-podszewki",
         "title": "Docker compose od podszewki"
+    },
+    {
+        "tag": "architecture",
+        "filename": "spring-boot/tg-blog-sb-docker-12-przydatnych-komend",
+        "title": "Docker - 12 przydatnych komend"
     }
 ];
