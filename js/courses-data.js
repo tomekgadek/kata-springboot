@@ -403,5 +403,10 @@ const coursesData = [
         "tag": "architecture",
         "filename": "spring-boot/tg-blog-sb-docker-12-przydatnych-komend",
         "title": "Docker - 12 przydatnych komend"
+    },
+    {
+        "tag": "database",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-flyway",
+        "title": "Co to jest Flyway?"
     }
 ];

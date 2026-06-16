@@ -78,3 +78,4 @@
 + [Przykład zastosowania adnotacji @SpringBootTest](pages/spring-boot/tg-blog-sb-przyklad-zastosowania-adnotacji-springboot-test.md)
 + [Co to jest Spring WebFlux Framework?](pages/spring-boot/tg-blog-sb-co-to-jest-spring-webflux-framework.md)
 + [Docker - 12 przydatnych komend](pages/spring-boot/tg-blog-sb-docker-12-przydatnych-komend.md)
++ [Co to jest Flyway?](pages/spring-boot/tg-blog-sb-co-to-jest-flyway.md)
