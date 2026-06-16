@@ -6,7 +6,7 @@ Flyway to popularne narzędzie open-source do wersjonowania i migracji schematu 
 
 W Spring Boot integracja z Flyway jest niezwykle prosta. Wystarczy dodać odpowiednią zależność do projektu i umieścić skrypty SQL w wyznaczonym folderze.
 
-1. Dodaj zależność w pliku `pom.xml`:
++ Dodaj zależność w pliku `pom.xml`:
 ```xml
 <dependency>
     <groupId>org.flywaydb</groupId>
@@ -14,7 +14,7 @@ W Spring Boot integracja z Flyway jest niezwykle prosta. Wystarczy dodać odpowi
 </dependency>
 ```
 
-2. Utwórz plik migracji z rozszerzeniem `.sql`, zachowując specjalną konwencję nazewnictwa, np. `V1__init_users_table.sql` w folderze `src/main/resources/db/migration`:
++ Utwórz plik migracji z rozszerzeniem `.sql`, zachowując specjalną konwencję nazewnictwa, np. `V1__init_users_table.sql` w folderze `src/main/resources/db/migration`:
 ```sql
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
