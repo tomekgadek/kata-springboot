@@ -408,5 +408,10 @@ const coursesData = [
         "tag": "database",
         "filename": "spring-boot/tg-blog-sb-co-to-jest-flyway",
         "title": "Co to jest Flyway?"
+    },
+    {
+        "tag": "database",
+        "filename": "spring-boot/tg-blog-sb-co-to-jest-liquibase",
+        "title": "Co to jest Liquibase?"
     }
 ];
